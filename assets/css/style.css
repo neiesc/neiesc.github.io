@@ -25,6 +25,14 @@ body {
     border-radius: 50%;
 }
 
+.info .social a {
+    color: #fff;
+    padding: 0 2px;
+    text-decoration: none;
+}
+.info .social a i {
+    font-size: 36px;
+}
 
 /* particles.js */
 
