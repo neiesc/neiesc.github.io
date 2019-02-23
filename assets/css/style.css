@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    font: normal 75% Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 .info {
@@ -23,6 +23,18 @@ body {
 
 .info .profile-picture img {
     border-radius: 50%;
+}
+
+.info .bio h1 {
+    font-size: 25px;
+}
+
+.info .bio p {
+    font-size: 17px;
+}
+
+.info .social h4 {
+    font-size: 20px;
 }
 
 .info .social a {
@@ -46,16 +58,8 @@ body {
     .info .profile-picture img {
         width: 50%;
     }
-    .info .bio h1 {
-        font-size: 25px;
-    }
-    .info .bio p {
-        font-size: 17px;
-    }
-    .info .social h4 {
-        font-size: 20px;
-    }
 }
+
 
 /* particles.js */
 
