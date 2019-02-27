@@ -6,7 +6,7 @@
     "serve": "webpack-dev-server",
     "release": "yarn build && yarn push",
     "build": "webpack --mode=production",
-    "push": "push-dir --dir=dist --branch=gh-pages",
+    "push": "push-dir --dir=dist --branch=master",
     "watch": "webpack --watch",
     "lint": "npx eslint src"
   },

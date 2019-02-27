@@ -17,7 +17,7 @@
 
 ## Other command
 
-* ```yarn release``` # publish to branch gh-pages
+* ```yarn release``` # publish to master branch
 * ```yarn build```
 * ```yarn push```
 * ```yarn watch```
