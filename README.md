@@ -13,9 +13,12 @@
 
 ## Running Application
 
-* ```yarn build```
-* ```yarn start:dev```
+* ```yarn serve```
 
 ## Other command
 
+* ```yarn release``` # publish to branch gh-pages
+* ```yarn build```
+* ```yarn push```
 * ```yarn watch```
+* ```yarn lint``` # run eslint, need run ```yarn global add npx```

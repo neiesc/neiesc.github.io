@@ -1,3 +1,5 @@
 import '../css/main.css'
 
-particlesJS.load('particles-js', 'dist/particles.json')
+require('particles.js')
+
+window.particlesJS.load('particles-js', 'particles.json')

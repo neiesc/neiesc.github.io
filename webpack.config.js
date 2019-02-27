@@ -9,11 +9,11 @@ module.exports = {
   entry: './src/assets/js/app.js',
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
+      /* new UglifyJsPlugin({
         cache: true,
         parallel: true,
         sourceMap: true
-      }),
+      }), */
       new OptimizeCSSAssetsPlugin({})
     ]
   },
@@ -33,7 +33,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src/index.html'),
-      filename: '../index.html',
+      filename: 'index.html',
       minify: {
         html5: true,
         collapseWhitespace: true,
@@ -50,10 +50,14 @@ module.exports = {
         useShortDoctype: true
       }
     }),
-    new CopyWebpackPlugin([{
-      from: path.join(__dirname, 'src/assets/js/particles.json'),
-      to: 'particles.json'
-    }]),
+    new CopyWebpackPlugin([
+      { from: path.join(__dirname, 'src/assets/js/particles.json') },
+      { from: path.join(__dirname, '*.png') },
+      { from: path.join(__dirname, 'browserconfig.xml') },
+      { from: path.join(__dirname, 'favicon.ico') },
+      { from: path.join(__dirname, 'safari-pinned-tab.svg') },
+      { from: path.join(__dirname, 'site.webmanifest') }
+    ]),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
