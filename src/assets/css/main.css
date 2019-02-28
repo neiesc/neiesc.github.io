@@ -21,6 +21,12 @@ body {
     z-index: 100;
 }
 
+.info a {
+  color: #fff;
+  padding: 0 2px;
+  text-decoration: none;
+}
+
 .info .profile-picture img {
     border-radius: 50%;
 }
@@ -35,12 +41,6 @@ body {
 
 .info .social h4 {
     font-size: 20px;
-}
-
-.info .social a {
-    color: #fff;
-    padding: 0 2px;
-    text-decoration: none;
 }
 
 .info .social a i {
