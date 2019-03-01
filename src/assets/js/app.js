@@ -1,5 +1,5 @@
-import '../css/main.css'
+import '../css/main.css';
 
-require('particles.js')
+require('particles.js');
 
-window.particlesJS.load('particles-js', 'particles.json')
+window.particlesJS.load('particles-js', 'particles.json');
