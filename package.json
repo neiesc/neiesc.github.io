@@ -8,7 +8,7 @@
     "build": "webpack --mode=production",
     "push": "push-dir --dir=dist --branch=master",
     "watch": "webpack --watch",
-    "lint": "npx eslint src"
+    "lint": "eslint src"
   },
   "private": true,
   "repository": "git@github.com:neiesc/neiesc.github.io.git",
