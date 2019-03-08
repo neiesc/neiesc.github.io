@@ -2,6 +2,11 @@
   "name": "neiesc.github.io",
   "version": "0.1.0",
   "description": "My Portfolio and blog.",
+  "keywords": [
+    "site",
+    "blog",
+    "portfolio"
+  ],
   "scripts": {
     "serve": "webpack-dev-server",
     "release": "yarn build && yarn push",
@@ -12,7 +17,11 @@
   },
   "private": true,
   "repository": "git@github.com:neiesc/neiesc.github.io.git",
-  "author": "Edinei Cavalcanti <edinei.esc@gmail.com>",
+  "author": {
+    "name": "Edinei Cavalcanti",
+    "email": "edinei.esc@gmail.com",
+    "web": "https://edinei.dev"
+  },
   "license": "MIT",
   "devDependencies": {
     "copy-webpack-plugin": "^5.0.0",
@@ -35,5 +44,7 @@
   },
   "dependencies": {
     "particles.js": "^2.0.0"
-  }
+  },
+  "main": "src/assets/js/app.js",
+  "style": "src/assets/css/main.css"
 }
