@@ -25,4 +25,4 @@
   * ```yarn build```
   * ```yarn push```
   * ```yarn watch```
-  * ```yarn lint``` # run eslint, need run ```yarn global add npx```
+  * ```yarn lint``` # run eslint
