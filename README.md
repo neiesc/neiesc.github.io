@@ -8,21 +8,21 @@
 
 ## System Requirements
 
-  * **[NodeJS](https://nodejs.org/en/)**
-  * **[Yarn](https://yarnpkg.com/en/)**
+- **[NodeJS](https://nodejs.org/en/)**
+- **[Yarn](https://yarnpkg.com/en/)**
 
 ## Installing
 
-  * ```yarn install```
+- `yarn install`
 
 ## Running Application
 
-  * ```yarn serve```
+- `yarn serve`
 
 ## Other command
 
-  * ```yarn release``` # publish to master branch
-  * ```yarn build```
-  * ```yarn push```
-  * ```yarn watch```
-  * ```yarn lint``` # run eslint
+- `yarn release` # publish to master branch
+- `yarn build`
+- `yarn push`
+- `yarn watch`
+- `yarn lint`
