@@ -52,7 +52,7 @@ body {
 
 @media only screen and (max-width: 768px) {
     .info {
-        top: 5%;
+        top: 10%;
         width: 100%;
     }
     .info .profile-picture img {
