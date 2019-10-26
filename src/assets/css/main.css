@@ -2,7 +2,20 @@
 
 body {
     margin: 0;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', serif !important;
+}
+
+/* menu devices larges */
+.uk-navbar-nav > li.uk-active > a {
+  color: #fff;
+}
+
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge,
+  .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge,
+  h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
 }
 
 .info {
@@ -31,22 +44,9 @@ body {
     border-radius: 50%;
 }
 
-.info .bio h1 {
-    font-size: 25px;
-}
-
-.info .bio p {
-    font-size: 17px;
-}
-
-.info .social h4 {
-    font-size: 20px;
-}
-
 .info .social a i {
     font-size: 36px;
 }
-
 
 /* For mobile phones: */
 
