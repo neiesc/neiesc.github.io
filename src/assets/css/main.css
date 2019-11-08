@@ -134,3 +134,59 @@ canvas {
 .count-particles {
     border-radius: 0 0 3px 3px;
 }
+
+/* timeline */
+.timeline .timeline-item {
+    display: flex;
+    display: -ms-flexbox;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+.timeline .timeline-item::before {
+    background: #dadee4;
+    content: "";
+    height: 100%;
+    left: 14px;
+    position: absolute;
+    top: 30px;
+    width: 2px;
+}
+.timeline .timeline-item .timeline-left {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+.timeline .timeline-item .timeline-left .uk-badge {
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+}
+.timeline .timeline-item .timeline-left .uk-badge.uk-badge-danger {
+  background: #f0506e;
+}
+.timeline .timeline-item .timeline-left .uk-badge.uk-badge-success {
+  background: #32d296;
+}
+.timeline .timeline-item .timeline-left .uk-badge.uk-badge-warning {
+  background: #faa05a;
+}
+.timeline .timeline-item .timeline-left .uk-icon {
+    color: #fff;
+}
+.timeline .timeline-item .timeline-content {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0 0 0 1rem;
+}
+.timeline .timeline-item-finish {
+    display: flex;
+    display: -ms-flexbox;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+.timeline .timeline-item-finish .timeline-left .uk-badge {
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+}
