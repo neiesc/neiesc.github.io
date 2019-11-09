@@ -5,44 +5,32 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
+let minifyOptions = {
+  html5: true,
+  collapseWhitespace: true,
+  minifyCSS: true,
+  minifyJS: true,
+  minifyURLs: false,
+  removeAttributeQuotes: true,
+  removeComments: true,
+  removeEmptyAttributes: true,
+  removeOptionalTags: true,
+  removeRedundantAttributes: true,
+  removeScriptTypeAttributes: true,
+  removeStyleLinkTypeAttributese: true,
+  useShortDoctype: true
+};
+
 let HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/index.html'),
   filename: 'index.html',
-  minify: {
-    html5: true,
-    collapseWhitespace: true,
-    minifyCSS: true,
-    minifyJS: true,
-    minifyURLs: false,
-    removeAttributeQuotes: true,
-    removeComments: true,
-    removeEmptyAttributes: true,
-    removeOptionalTags: true,
-    removeRedundantAttributes: true,
-    removeScriptTypeAttributes: true,
-    removeStyleLinkTypeAttributese: true,
-    useShortDoctype: true
-  }
+  minify: minifyOptions
 });
 
 let HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/podcasts/index.html'),
   filename: 'podcasts/index.html',
-  minify: {
-    html5: true,
-    collapseWhitespace: true,
-    minifyCSS: true,
-    minifyJS: true,
-    minifyURLs: false,
-    removeAttributeQuotes: true,
-    removeComments: true,
-    removeEmptyAttributes: true,
-    removeOptionalTags: true,
-    removeRedundantAttributes: true,
-    removeScriptTypeAttributes: true,
-    removeStyleLinkTypeAttributese: true,
-    useShortDoctype: true
-  }
+  minify: minifyOptions
 });
 
 module.exports = {
@@ -77,6 +65,7 @@ module.exports = {
       { from: path.join(__dirname, '.gitignore') },
       { from: path.join(__dirname, 'CNAME') },
       { from: path.join(__dirname, 'src/assets/js/particles.json') },
+      { from: path.join(__dirname, 'src/assets/js/podcasts.json') },
       { from: path.join(__dirname, '*.png') },
       { from: path.join(__dirname, 'browserconfig.xml') },
       { from: path.join(__dirname, 'favicon.ico') },
