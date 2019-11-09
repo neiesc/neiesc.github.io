@@ -5,6 +5,6 @@ var podcast = require('./podcast');
 
 window.particlesJS.load('particles-js', 'particles.json');
 
-if (document.querySelector("main.podcasts")) {
+if (document.querySelector('main.podcasts')) {
   podcast.init();
 }

@@ -17,7 +17,7 @@ function compareValues(key, order='asc') {
       comparison = -1;
     }
     return (
-      (order == 'desc') ? (comparison * -1) : comparison
+      (order === 'desc') ? (comparison * -1) : comparison
     );
   };
 }
@@ -31,7 +31,7 @@ module.exports = {
 
     podcasts.forEach(podcast => {
       let timelineItem = document.createElement('div');
-      timelineItem.className = "timeline-item";
+      timelineItem.className = 'timeline-item';
       timelineItem.innerHTML = `
       <div class="timeline-left">
           <span class="uk-badge uk-badge-danger"><span uk-icon="heart"></span></span>
@@ -41,15 +41,15 @@ module.exports = {
             <h3 class="uk-card-title"><a href="${podcast.url}" target="_blank">${podcast.title}</a></h3>
         </div>
       </div>`;
-      document.querySelector("div.timeline").appendChild(timelineItem);
+      document.querySelector('div.timeline').appendChild(timelineItem);
     });
 
     let timelineItemFinish = document.createElement('div');
-    timelineItemFinish.className = "timeline-item-finish";
+    timelineItemFinish.className = 'timeline-item-finish';
     timelineItemFinish.innerHTML = `
     <div class="timeline-left">
         <span class="uk-badge uk-badge-danger"><span uk-icon="triangle-down"></span></span>
     </div>`;
-    document.querySelector("div.timeline").appendChild(timelineItemFinish);
+    document.querySelector('div.timeline').appendChild(timelineItemFinish);
   }
 };
