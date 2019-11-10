@@ -1,14 +1,14 @@
-function compareValues(key, order='asc') {
-  return function(a, b) {
-    if(!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
+function compareValues (key, order = 'asc') {
+  return function (a, b) {
+    if (!Object.prototype.hasOwnProperty.call(a, key) || !Object.prototype.hasOwnProperty.call(b, key)) {
       // property doesn't exist on either object
       return 0;
     }
 
-    const varA = (typeof a[key] === 'string') ?
-      a[key].toUpperCase() : a[key];
-    const varB = (typeof b[key] === 'string') ?
-      b[key].toUpperCase() : b[key];
+    const varA = (typeof a[key] === 'string')
+      ? a[key].toUpperCase() : a[key];
+    const varB = (typeof b[key] === 'string')
+      ? b[key].toUpperCase() : b[key];
 
     let comparison = 0;
     if (varA > varB) {
@@ -23,14 +23,14 @@ function compareValues(key, order='asc') {
 }
 
 module.exports = {
-  init: async function(){
+  init: async function () {
     const response = await fetch('podcasts.json');
     const podcasts = await response.json();
 
     podcasts.sort(compareValues('title'));
 
     podcasts.forEach(podcast => {
-      let timelineItem = document.createElement('div');
+      const timelineItem = document.createElement('div');
       timelineItem.className = 'timeline-item';
       timelineItem.innerHTML = `
       <div class="timeline-left">
@@ -44,7 +44,7 @@ module.exports = {
       document.querySelector('div.timeline').appendChild(timelineItem);
     });
 
-    let timelineItemFinish = document.createElement('div');
+    const timelineItemFinish = document.createElement('div');
     timelineItemFinish.className = 'timeline-item-finish';
     timelineItemFinish.innerHTML = `
     <div class="timeline-left">
