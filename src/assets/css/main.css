@@ -5,7 +5,36 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 
+/* menu devices larges */
+.uk-navbar-nav > li.uk-active > a {
+  color: #fff;
+}
+
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge,
+  .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge,
+  h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+}
+
 .info {
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.podcasts {
     display: block;
     position: absolute;
     top: 15%;
@@ -31,46 +60,32 @@ body {
     border-radius: 50%;
 }
 
-.info .bio h1 {
-    font-size: 25px;
-}
-
-.info .bio p {
-    font-size: 17px;
-}
-
-.info .social h4 {
-    font-size: 20px;
-}
-
 .info .social a i {
     font-size: 36px;
 }
-
 
 /* For mobile phones: */
 
 @media only screen and (max-width: 768px) {
     .info {
-        top: 5%;
-        width: 100%;
+      top: 10%;
+      width: 100%;
     }
     .info .profile-picture img {
-        width: 50%;
+      width: 50%;
+    }
+    .podcasts {
+      width: 100%;
     }
 }
 
-
 /* particles.js */
-
 canvas {
     display: block;
     vertical-align: bottom;
 }
 
-
 /* ---- particles.js container ---- */
-
 #particles-js {
     position: fixed;
     width: 100%;
@@ -81,9 +96,7 @@ canvas {
     background-position: 50% 50%;
 }
 
-
 /* ---- stats.js ---- */
-
 .count-particles {
     background: #000022;
     position: absolute;
@@ -117,4 +130,60 @@ canvas {
 
 .count-particles {
     border-radius: 0 0 3px 3px;
+}
+
+/* timeline */
+.timeline .timeline-item {
+    display: flex;
+    display: -ms-flexbox;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+.timeline .timeline-item::before {
+    background: #dadee4;
+    content: "";
+    height: 100%;
+    left: 14px;
+    position: absolute;
+    top: 30px;
+    width: 2px;
+}
+.timeline .timeline-item .timeline-left {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+.timeline .timeline-item .timeline-left .uk-badge {
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+}
+.timeline .timeline-item .timeline-left .uk-badge.uk-badge-danger {
+  background: #f0506e;
+}
+.timeline .timeline-item .timeline-left .uk-badge.uk-badge-success {
+  background: #32d296;
+}
+.timeline .timeline-item .timeline-left .uk-badge.uk-badge-warning {
+  background: #faa05a;
+}
+.timeline .timeline-item .timeline-left .uk-icon {
+    color: #fff;
+}
+.timeline .timeline-item .timeline-content {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0 0 0 1rem;
+}
+.timeline .timeline-item-finish {
+    display: flex;
+    display: -ms-flexbox;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+.timeline .timeline-item-finish .timeline-left .uk-badge {
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 30px;
 }
