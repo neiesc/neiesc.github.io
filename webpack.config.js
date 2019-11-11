@@ -59,10 +59,10 @@ module.exports = {
     },
     {
       test: /\.js$/,
-      enforce: "pre",
+      enforce: 'pre',
       exclude: /(node_modules|public|scripts)/,
       use: [
-        "babel-loader"
+        'babel-loader'
       ]
     }]
   },
