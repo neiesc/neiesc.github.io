@@ -34,7 +34,7 @@ let HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-  entry: './src/assets/js/app.js',
+  entry: ['babel-polyfill', './src/assets/js/app.js'],
   optimization: {
     minimizer: [
       new UglifyJsPlugin({

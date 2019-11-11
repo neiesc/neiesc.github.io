@@ -24,7 +24,7 @@ function compareValues (key, order = 'asc') {
 
 module.exports = {
   init: async function () {
-    const response = await fetch('podcasts.json');
+    const response = await fetch('/podcasts.json');
     const podcasts = await response.json();
 
     podcasts.sort(compareValues('title'));
