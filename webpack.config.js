@@ -56,6 +56,14 @@ module.exports = {
       },
       'css-loader'
       ]
+    },
+    {
+      test: /\.js$/,
+      enforce: 'pre',
+      exclude: /(node_modules|public|scripts)/,
+      use: [
+        'babel-loader'
+      ]
     }]
   },
   plugins: [
