@@ -21,7 +21,7 @@
 
 ## Other command
 
-- `yarn release` # publish to master branch
+- `yarn release` # publish to master branch and publish it
 - `yarn build`
 - `yarn push`
 - `yarn watch`
