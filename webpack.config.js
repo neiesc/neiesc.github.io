@@ -5,7 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-let minifyOptions = {
+const minifyOptions = {
   html5: true,
   collapseWhitespace: true,
   minifyCSS: true,
@@ -21,13 +21,13 @@ let minifyOptions = {
   useShortDoctype: true
 };
 
-let HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
+const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/index.html'),
   filename: 'index.html',
   minify: minifyOptions
 });
 
-let HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
+const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/podcasts/index.html'),
   filename: 'podcasts/index.html',
   minify: minifyOptions

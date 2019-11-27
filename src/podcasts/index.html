@@ -58,43 +58,14 @@
 
     <div id="particles-js"></div>
 
-    <div class="uk-container uk-visible@s">
-        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-            <div class="uk-navbar-left">
-                <ul class="uk-navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#">Blog (em breve)</a></li>
-                    <li class="uk-active"><a href="/podcasts">Podcasts</a></li>
-                    <li><a href="#">Youtube Channel (em breve)</a></li>
-                    <li><a href="#">Projetos (em breve)</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <div class="uk-hidden@s uk-sticky uk-sticky-fixed" uk-sticky="" style="position: fixed; top: 0px; width: 320px;">
-        <nav class="uk-navbar uk-navbar-container uk-navbar-transparent uk-margin">
-            <div class="uk-navbar-left">
-                <a class="uk-navbar-toggle" href="#menu-devices-small" uk-toggle>
-                    <span uk-navbar-toggle-icon="" class="uk-icon uk-navbar-toggle-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="navbar-toggle-icon"><rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2"></rect><rect y="15" width="20" height="2"></rect></svg></span>
-                    <span class="uk-margin-small-left"></span>
-                </a>
-            </div>
-        </nav>
-    </div>
-    <div class="uk-sticky-placeholder" style="height: 100px; margin: 0px;"></div>
-    <div id="menu-devices-small" uk-offcanvas>
-        <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
-            <button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
-            <h3>Menu</h3>
-            <ul class="uk-nav-primary uk-nav-parent-icon uk-nav" uk-nav="">
-                <li><a href="/">Home</a></li>
-                <li><a href="#">Blog (em breve)</a></li>
-                <li class="uk-active"><a href="/podcasts">Podcasts</a></li>
-                <li><a href="#">Youtube Channel (em breve)</a></li>
-                <li><a href="#">Projetos (em breve)</a></li>
-            </ul>
-        </div>
-    </div>
+    <%
+      var template = require("html-loader!../shared/menu.html");
+    %>
+    <%=
+      template
+      .replace('${homeActive}','')
+      .replace('${podcastActive}', 'class="uk-active"')
+    %>
   </div>
 
   <!-- scripts -->
