@@ -18,5 +18,37 @@
   {
     "title": "Fronteiras da Ciência",
     "url": "http://www.ufrgs.br/frontdaciencia/"
+  },
+  {
+    "title": "The Data Engineering Podcast",
+    "url": "https://www.dataengineeringpodcast.com/"
+  },
+  {
+    "title": "BrazilJS",
+    "url": "https://braziljs.org/artigos/tags/podcast"
+  },
+  {
+    "title": "DatabaseCast",
+    "url": "http://databasecast.com.br/"
+  },
+  {
+    "title": "DevShow",
+    "url": "https://devshow.com.br/"
+  },
+  {
+    "title": "Castálio Podcast",
+    "url": "https://castalio.info/"
+  },
+  {
+    "title": "Hipsters Ponto Tech",
+    "url": "https://hipsters.tech/category/podcast/"
+  },
+  {
+    "title": "Software Engineering Radio",
+    "url": "https://www.se-radio.net/"
+  },
+  {
+    "title": "The Stack Overflow Podcast",
+    "url": "https://stackoverflow.blog/podcast/"
   }
 ]
