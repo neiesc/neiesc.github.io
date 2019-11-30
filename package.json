@@ -8,9 +8,9 @@
     "portfolio"
   ],
   "scripts": {
-    "serve": "webpack-dev-server",
-    "release": "yarn lint && yarn build && yarn push",
-    "build": "webpack --mode=production",
+    "serve": "yarn prettify && yarn lint && webpack-dev-server",
+    "release": "yarn build && yarn push",
+    "build": "yarn prettify && yarn lint && webpack --mode=production",
     "push": "push-dir --dir=dist --branch=master",
     "watch": "webpack --watch",
     "prettify": "prettier src/** --write",

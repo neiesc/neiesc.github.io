@@ -13,7 +13,7 @@
 
 ## Installing
 
-- `yarn install`
+- `yarn`
 
 ## Running Application
 
@@ -21,8 +21,9 @@
 
 ## Other command
 
-- `yarn release` # publish to master branch and publish portifolio
+- `yarn release` # build and publish (master branch)
 - `yarn build`
 - `yarn push`
 - `yarn watch`
+- `yarn prettify`
 - `yarn lint`
