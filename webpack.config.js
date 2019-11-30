@@ -1,9 +1,11 @@
-var path = require('path');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
+const title = 'Edinei Cavalcanti (TESTE)';
 
 const minifyOptions = {
   html5: true,
@@ -24,19 +26,35 @@ const minifyOptions = {
 const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/index.html'),
   filename: 'index.html',
-  minify: minifyOptions
+  minify: minifyOptions,
+  title,
+  keywords: `neiesc,Edinei,developer,desenvolvedor,programador,programmer,
+  dotnet,dotnetcore,csharp,nodejs,python`,
+  description: `Olá sou Edinei aka neiesc.
+  Começei profissionalmente em 2010 minha carreira, sólido conhecimente em TI,
+  mais especificamente em desenvolvimento de software em C#, .NET, .NET Core, Node.js e Python
+  com experiência em grandes aplicações.`,
+  author: 'Edinei aka neiesc'
 });
 
 const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/palestras/index.html'),
   filename: 'palestras/index.html',
-  minify: minifyOptions
+  minify: minifyOptions,
+  title: `Palestras - ${title}`,
+  keywords: 'palestras,eventos,workshop',
+  description: 'Lista das palestras (Palestra, Eventos ou Workshop) que palestrei.',
+  author: 'Edinei aka neiesc'
 });
 
 const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/podcasts/index.html'),
   filename: 'podcasts/index.html',
-  minify: minifyOptions
+  minify: minifyOptions,
+  title: `Palestras - ${title}`,
+  keywords: 'palestras,eventos,workshop',
+  description: 'Lista das palestras (Palestra, Eventos ou Workshop) que palestrei.',
+  author: 'Edinei aka neiesc'
 });
 
 module.exports = {
@@ -52,25 +70,26 @@ module.exports = {
     ]
   },
   module: {
-    rules: [{
-      test: /\.css$/,
-      use: [{
-        loader: MiniCssExtractPlugin.loader,
-        options: {
-          publicPath: '../'
-        }
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            }
+          },
+          'css-loader'
+        ]
       },
-      'css-loader'
-      ]
-    },
-    {
-      test: /\.js$/,
-      enforce: 'pre',
-      exclude: /(node_modules|public|scripts)/,
-      use: [
-        'babel-loader'
-      ]
-    }]
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        exclude: /(node_modules|public|scripts)/,
+        use: ['babel-loader']
+      }
+    ]
   },
   plugins: [
     HtmlWebpackPluginConfigIndex,
