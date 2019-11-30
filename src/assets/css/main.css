@@ -74,7 +74,8 @@ h6 {
   .info .profile-picture img {
     width: 50%;
   }
-  .podcasts {
+  .podcasts,
+  .palestras {
     width: 100%;
   }
 }
