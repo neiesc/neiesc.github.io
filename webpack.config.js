@@ -27,6 +27,12 @@ const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
   minify: minifyOptions
 });
 
+const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
+  template: path.join(__dirname, 'src/palestras/index.html'),
+  filename: 'palestras/index.html',
+  minify: minifyOptions
+});
+
 const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/podcasts/index.html'),
   filename: 'podcasts/index.html',
@@ -68,6 +74,7 @@ module.exports = {
   },
   plugins: [
     HtmlWebpackPluginConfigIndex,
+    HtmlWebpackPluginConfigPalestras,
     HtmlWebpackPluginConfigPodcasts,
     new CopyWebpackPlugin([
       { from: path.join(__dirname, '.gitignore') },
