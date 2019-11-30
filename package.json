@@ -13,7 +13,7 @@
     "build": "webpack --mode=production",
     "push": "push-dir --dir=dist --branch=master",
     "watch": "webpack --watch",
-    "prettify": "prettier src/**/*.js --write",
+    "prettify": "prettier src/** --write",
     "lint": "eslint src"
   },
   "private": true,
