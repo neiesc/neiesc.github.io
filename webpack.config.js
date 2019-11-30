@@ -5,8 +5,6 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-const title = 'Edinei Cavalcanti (TESTE)';
-
 const minifyOptions = {
   html5: true,
   collapseWhitespace: true,
@@ -22,6 +20,8 @@ const minifyOptions = {
   removeStyleLinkTypeAttributese: true,
   useShortDoctype: true
 };
+
+const title = 'Edinei Cavalcanti';
 
 const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/index.html'),
@@ -51,9 +51,9 @@ const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/podcasts/index.html'),
   filename: 'podcasts/index.html',
   minify: minifyOptions,
-  title: `Palestras - ${title}`,
-  keywords: 'palestras,eventos,workshop',
-  description: 'Lista das palestras (Palestra, Eventos ou Workshop) que palestrei.',
+  title: `Podcasts - ${title}`,
+  keywords: 'podcasts,podcast',
+  description: 'Lista dos podcasts que eu constumo escutar.',
   author: 'Edinei aka neiesc'
 });
 
