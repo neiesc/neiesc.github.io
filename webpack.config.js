@@ -97,7 +97,6 @@ module.exports = {
     HtmlWebpackPluginConfigPalestras,
     HtmlWebpackPluginConfigPodcasts,
     new CopyWebpackPlugin([
-      { from: path.join(__dirname, '.gitignore') },
       { from: path.join(__dirname, 'CNAME') },
       { from: path.join(__dirname, 'src/assets/js/particles.json') },
       { from: path.join(__dirname, 'src/assets/js/podcasts.json') },
