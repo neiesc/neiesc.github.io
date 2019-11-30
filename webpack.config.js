@@ -1,9 +1,11 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
+const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin')
 
 const minifyOptions = {
   html5: true,
@@ -19,7 +21,7 @@ const minifyOptions = {
   removeScriptTypeAttributes: true,
   removeStyleLinkTypeAttributese: true,
   useShortDoctype: true
-};
+}
 
 const title = 'Edinei Cavalcanti';
 
@@ -35,7 +37,7 @@ const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
   mais especificamente em desenvolvimento de software em C#, .NET, .NET Core, Node.js e Python
   com experiência em grandes aplicações.`,
   author: 'Edinei aka neiesc'
-});
+})
 
 const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/palestras/index.html'),
@@ -46,7 +48,7 @@ const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
   description:
     'Lista das palestras (Palestra, Eventos ou Workshop) que palestrei.',
   author: 'Edinei aka neiesc'
-});
+})
 
 const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/podcasts/index.html'),
@@ -56,7 +58,7 @@ const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
   keywords: 'podcasts,podcast',
   description: 'Lista dos podcasts que eu constumo escutar.',
   author: 'Edinei aka neiesc'
-});
+})
 
 module.exports = {
   entry: ['babel-polyfill', './src/assets/js/app.js'],
@@ -114,6 +116,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
-    })
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'async'
+    }),
+    new StyleExtHtmlWebpackPlugin()
   ]
-};
+}
