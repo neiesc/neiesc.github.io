@@ -97,14 +97,19 @@ module.exports = {
     HtmlWebpackPluginConfigPalestras,
     HtmlWebpackPluginConfigPodcasts,
     new CopyWebpackPlugin([
-      { from: path.join(__dirname, 'CNAME') },
+      { from: path.join(__dirname, 'src/CNAME') },
       { from: path.join(__dirname, 'src/assets/js/particles.json') },
       { from: path.join(__dirname, 'src/assets/js/podcasts.json') },
-      { from: path.join(__dirname, '*.png') },
-      { from: path.join(__dirname, 'browserconfig.xml') },
-      { from: path.join(__dirname, 'favicon.ico') },
-      { from: path.join(__dirname, 'safari-pinned-tab.svg') },
-      { from: path.join(__dirname, 'site.webmanifest') }
+      { from: path.join(__dirname, 'src/android-chrome-192x192.png') },
+      { from: path.join(__dirname, 'src/android-chrome-256x256.png') },
+      { from: path.join(__dirname, 'src/apple-touch-icon.png') },
+      { from: path.join(__dirname, 'src/favicon-16x16.png') },
+      { from: path.join(__dirname, 'src/favicon-32x32.png') },
+      { from: path.join(__dirname, 'src/mstile-150x150.png') },
+      { from: path.join(__dirname, 'src/browserconfig.xml') },
+      { from: path.join(__dirname, 'src/favicon.ico') },
+      { from: path.join(__dirname, 'src/safari-pinned-tab.svg') },
+      { from: path.join(__dirname, 'src/site.webmanifest') }
     ]),
     new MiniCssExtractPlugin({
       filename: '[name].css',
