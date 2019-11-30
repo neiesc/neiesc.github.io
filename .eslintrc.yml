@@ -10,5 +10,6 @@ globals:
 parserOptions:
   ecmaVersion: 2018
 rules: {
-  'semi': [1, 'always']
+  'semi': [1, 'never'],
+  "space-before-function-paren": ["error", "never"]
 }
