@@ -43,7 +43,8 @@ const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
   minify: minifyOptions,
   title: `Palestras - ${title}`,
   keywords: 'palestras,eventos,workshop',
-  description: 'Lista das palestras (Palestra, Eventos ou Workshop) que palestrei.',
+  description:
+    'Lista das palestras (Palestra, Eventos ou Workshop) que palestrei.',
   author: 'Edinei aka neiesc'
 });
 
