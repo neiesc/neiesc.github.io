@@ -5,33 +5,6 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 
-/* menu devices larges */
-.uk-navbar-nav > li.uk-active > a {
-  color: #fff;
-}
-
-.uk-h1,
-.uk-h2,
-.uk-h3,
-.uk-h4,
-.uk-h5,
-.uk-h6,
-.uk-heading-2xlarge,
-.uk-heading-large,
-.uk-heading-medium,
-.uk-heading-small,
-.uk-heading-xlarge,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #fff;
-  font-family: 'Roboto Slab', serif;
-  font-weight: bold;
-}
-
 .info,
 .podcasts,
 .palestras {
@@ -71,13 +44,42 @@ h6 {
     top: 10%;
     width: 100%;
   }
+
   .info .profile-picture img {
     width: 50%;
   }
+
   .podcasts,
   .palestras {
     width: 100%;
   }
+}
+
+/* menu devices larges */
+.uk-navbar-nav > li.uk-active > a {
+  color: #fff;
+}
+
+.uk-h1,
+.uk-h2,
+.uk-h3,
+.uk-h4,
+.uk-h5,
+.uk-h6,
+.uk-heading-2xlarge,
+.uk-heading-large,
+.uk-heading-medium,
+.uk-heading-small,
+.uk-heading-xlarge,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
 }
 
 /* particles.js */
@@ -99,7 +101,7 @@ canvas {
 
 /* ---- stats.js ---- */
 .count-particles {
-  background: #000022;
+  background: #002;
   position: absolute;
   top: 48px;
   left: 0;
@@ -112,6 +114,7 @@ canvas {
   padding-bottom: 2px;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
+  border-radius: 0 0 3px 3px;
 }
 
 .js-count-particles {
@@ -130,10 +133,6 @@ canvas {
   overflow: hidden;
 }
 
-.count-particles {
-  border-radius: 0 0 3px 3px;
-}
-
 /* timeline */
 .timeline .timeline-item {
   display: flex;
@@ -141,6 +140,7 @@ canvas {
   margin-bottom: 1.2rem;
   position: relative;
 }
+
 .timeline .timeline-item::before {
   background: #dadee4;
   content: '';
@@ -150,39 +150,48 @@ canvas {
   top: 30px;
   width: 2px;
 }
+
 .timeline .timeline-item .timeline-left {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
+
 .timeline .timeline-item .timeline-left .uk-badge {
   padding: 0;
   margin: 0;
   width: 30px;
   height: 30px;
 }
+
 .timeline .timeline-item .timeline-left .uk-badge.uk-badge-danger {
   background: #f0506e;
 }
+
 .timeline .timeline-item .timeline-left .uk-badge.uk-badge-success {
   background: #32d296;
 }
+
 .timeline .timeline-item .timeline-left .uk-badge.uk-badge-warning {
   background: #faa05a;
 }
+
 .timeline .timeline-item .timeline-left .uk-icon {
   color: #fff;
 }
+
 .timeline .timeline-item .timeline-content {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 0 0 0 1rem;
 }
+
 .timeline .timeline-item-finish {
   display: flex;
   display: -ms-flexbox;
   margin-bottom: 1.2rem;
   position: relative;
 }
+
 .timeline .timeline-item-finish .timeline-left .uk-badge {
   padding: 0;
   margin: 0;
