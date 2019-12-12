@@ -37,7 +37,7 @@ module.exports = {
       </div>
       <div class="timeline-content">
         <div class="uk-card uk-card-default uk-card-body">
-            <h3 class="uk-card-title"><a href="${podcast.url}" target="_blank">${podcast.title}</a></h3>
+            <h3 class="uk-card-title"><a href="${podcast.url}" target="_blank" rel="noopener">${podcast.title}</a></h3>
         </div>
       </div>`
       document.querySelector('div.timeline').appendChild(timelineItem)
