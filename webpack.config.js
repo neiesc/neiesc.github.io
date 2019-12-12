@@ -89,7 +89,7 @@ module.exports = {
       {
         test: /\.js$/,
         enforce: 'pre',
-        exclude: /(node_modules|public|scripts)/,
+        exclude: /(node_modules|public|scripts|sw\w*)/,
         use: ['babel-loader']
       }
     ]
@@ -100,6 +100,7 @@ module.exports = {
     HtmlWebpackPluginConfigPodcasts,
     new CopyWebpackPlugin([
       { from: path.join(__dirname, 'src/CNAME') },
+      { from: path.join(__dirname, 'src/assets/js/sw.js') },
       { from: path.join(__dirname, 'src/assets/js/particles.json') },
       { from: path.join(__dirname, 'src/assets/js/podcasts.json') },
       { from: path.join(__dirname, 'src/android-chrome-192x192.png') },
