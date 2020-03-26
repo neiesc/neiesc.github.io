@@ -11,5 +11,9 @@ parserOptions:
   ecmaVersion: 2018
 rules: {
   'semi': [1, 'never'],
-  "space-before-function-paren": ["error", "never"]
+  "space-before-function-paren": ["error", {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+    }]
 }

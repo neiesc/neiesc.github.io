@@ -1,5 +1,5 @@
 function compareValues(key, order = 'asc') {
-  return function(a, b) {
+  return function (a, b) {
     if (
       !Object.prototype.hasOwnProperty.call(a, key) ||
       !Object.prototype.hasOwnProperty.call(b, key)
@@ -22,7 +22,7 @@ function compareValues(key, order = 'asc') {
 }
 
 module.exports = {
-  init: async function() {
+  init: async function () {
     const response = await fetch('/podcasts.json')
     const podcasts = await response.json()
 
