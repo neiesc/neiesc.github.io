@@ -24,6 +24,5 @@
 - `yarn release` # build and publish (master branch)
 - `yarn build`
 - `yarn push`
-- `yarn watch`
 - `yarn prettify`
 - `yarn lint`

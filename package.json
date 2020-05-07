@@ -12,7 +12,6 @@
     "release": "yarn build && yarn push",
     "build": "yarn prettify && yarn lint && webpack --mode=production",
     "push": "push-dir --dir=dist --branch=master",
-    "watch": "webpack --watch",
     "prettify": "prettier src/** --write",
     "lint": "eslint src"
   },
