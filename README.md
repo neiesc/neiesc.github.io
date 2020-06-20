@@ -15,14 +15,13 @@
 
 - `yarn`
 
-## Running Application
+## Running Application and open browser
 
 - `yarn serve`
 
-## Other command
+## All command
 
-- `yarn release` # build and publish (master branch)
+- `yarn serve`
 - `yarn build`
-- `yarn push`
 - `yarn prettify`
 - `yarn lint`
