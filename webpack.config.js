@@ -63,7 +63,7 @@ const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
 module.exports = {
   entry: ['babel-polyfill', './src/assets/js/app.js'],
   output: {
-    publicPath: '../'
+    publicPath: '/'
   },
   optimization: {
     minimizer: [
@@ -126,5 +126,9 @@ module.exports = {
       defaultAttribute: 'async'
     }),
     new StyleExtHtmlWebpackPlugin()
-  ]
+  ],
+  devServer: {
+    open: true,
+    compress: true
+  }
 }
