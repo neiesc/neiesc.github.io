@@ -26,7 +26,7 @@ const minifyOptions = {
 const title = 'Edinei Cavalcanti'
 
 const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
-  template: path.join(__dirname, 'src/index.html'),
+  template: path.join(__dirname, '../src/index.html'),
   filename: 'index.html',
   minify: minifyOptions,
   title,
@@ -40,7 +40,7 @@ const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
 })
 
 const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
-  template: path.join(__dirname, 'src/palestras/index.html'),
+  template: path.join(__dirname, '../src/palestras/index.html'),
   filename: 'palestras/index.html',
   minify: minifyOptions,
   title: `Palestras - ${title}`,
@@ -51,7 +51,7 @@ const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
 })
 
 const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
-  template: path.join(__dirname, 'src/podcasts/index.html'),
+  template: path.join(__dirname, '../src/podcasts/index.html'),
   filename: 'podcasts/index.html',
   minify: minifyOptions,
   title: `Podcasts - ${title}`,
@@ -61,7 +61,7 @@ const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
 })
 
 module.exports = {
-  entry: ['babel-polyfill', './src/assets/js/app.js'],
+  entry: ['babel-polyfill', path.join(__dirname, '../src/assets/js/app.js')],
   output: {
     publicPath: '/'
   },
@@ -103,19 +103,19 @@ module.exports = {
     HtmlWebpackPluginConfigPodcasts,
     new CopyWebpackPlugin({
       patterns: [
-        { from: path.join(__dirname, 'src/CNAME') },
-        { from: path.join(__dirname, 'src/assets/js/particles.json') },
-        { from: path.join(__dirname, 'src/assets/js/podcasts.json') },
-        { from: path.join(__dirname, 'src/android-chrome-192x192.png') },
-        { from: path.join(__dirname, 'src/android-chrome-256x256.png') },
-        { from: path.join(__dirname, 'src/apple-touch-icon.png') },
-        { from: path.join(__dirname, 'src/favicon-16x16.png') },
-        { from: path.join(__dirname, 'src/favicon-32x32.png') },
-        { from: path.join(__dirname, 'src/mstile-150x150.png') },
-        { from: path.join(__dirname, 'src/browserconfig.xml') },
-        { from: path.join(__dirname, 'src/favicon.ico') },
-        { from: path.join(__dirname, 'src/safari-pinned-tab.svg') },
-        { from: path.join(__dirname, 'src/manifest.json') }
+        { from: path.join(__dirname, '../src/CNAME') },
+        { from: path.join(__dirname, '../src/assets/js/particles.json') },
+        { from: path.join(__dirname, '../src/assets/js/podcasts.json') },
+        { from: path.join(__dirname, '../src/android-chrome-192x192.png') },
+        { from: path.join(__dirname, '../src/android-chrome-256x256.png') },
+        { from: path.join(__dirname, '../src/apple-touch-icon.png') },
+        { from: path.join(__dirname, '../src/favicon-16x16.png') },
+        { from: path.join(__dirname, '../src/favicon-32x32.png') },
+        { from: path.join(__dirname, '../src/mstile-150x150.png') },
+        { from: path.join(__dirname, '../src/browserconfig.xml') },
+        { from: path.join(__dirname, '../src/favicon.ico') },
+        { from: path.join(__dirname, '../src/safari-pinned-tab.svg') },
+        { from: path.join(__dirname, '../src/manifest.json') }
       ]
     }),
     new MiniCssExtractPlugin({
@@ -126,9 +126,5 @@ module.exports = {
       defaultAttribute: 'async'
     }),
     new StyleExtHtmlWebpackPlugin()
-  ],
-  devServer: {
-    open: true,
-    compress: true
-  }
+  ]
 }

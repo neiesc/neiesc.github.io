@@ -8,9 +8,9 @@
     "portfolio"
   ],
   "scripts": {
-    "serve": "yarn prettify && yarn lint && webpack-dev-server",
+    "serve": "yarn prettify && yarn lint && webpack-dev-server --config config/webpack.dev.js",
     "release": "yarn build && yarn push",
-    "build": "yarn prettify && yarn lint && webpack --mode=production",
+    "build": "yarn prettify && yarn lint && webpack --config config/webpack.prod.js",
     "push": "push-dir --dir=dist --branch=master",
     "prettify": "prettier src/** --write",
     "lint": "eslint src"
@@ -48,7 +48,8 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "particles.js": "^2.0.0"
