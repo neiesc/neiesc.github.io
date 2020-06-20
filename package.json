@@ -54,6 +54,8 @@
   "main": "src/assets/js/app.js",
   "style": "src/assets/css/main.css",
   "resolutions": {
-    "set-value": ">= 2.0.1"
+    "set-value": ">= 2.0.1",
+    "acorn": ">= 7.1.1",
+    "kind-of": ">= 6.0.3"
   }
 }
