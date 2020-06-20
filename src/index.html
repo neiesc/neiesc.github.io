@@ -243,11 +243,9 @@
 
       <div id="particles-js"></div>
 
-      <% var template = require("html-loader!./shared/menu.html"); %>
-      <%= template
-      .split('${homeActive}').join('class="uk-active"')
-      .split('${palestrasActive}').join('')
-      .split('${podcastActive}').join('')
+      <% var template = require("html-loader!./shared/menu.html"); %> <%=
+      template .split('${homeActive}').join('class="uk-active"')
+      .split('${palestrasActive}').join('') .split('${podcastActive}').join('')
       %>
     </div>
 
