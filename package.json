@@ -52,5 +52,8 @@
     "particles.js": "^2.0.0"
   },
   "main": "src/assets/js/app.js",
-  "style": "src/assets/css/main.css"
+  "style": "src/assets/css/main.css",
+  "resolutions": {
+    "set-value": ">= 2.0.1"
+  }
 }
