@@ -104,8 +104,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: path.join(__dirname, '../src/CNAME') },
-        { from: path.join(__dirname, '../src/assets/js/particles.json') },
-        { from: path.join(__dirname, '../src/assets/js/podcasts.json') },
+        { from: path.join(__dirname, '../src/config/particles.json') },
+        { from: path.join(__dirname, '../src/data/podcasts.json') },
         { from: path.join(__dirname, '../src/android-chrome-192x192.png') },
         { from: path.join(__dirname, '../src/android-chrome-256x256.png') },
         { from: path.join(__dirname, '../src/apple-touch-icon.png') },
