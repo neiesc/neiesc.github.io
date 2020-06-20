@@ -154,11 +154,13 @@
 
       <div id="particles-js"></div>
 
-      <% var template = require("html-loader!../shared/menu.html"); %> <%=
-      template .replace('${homeActive}','').replace('${homeActive}','')
-      .replace('${palestrasActive}',
-      'class="uk-active"').replace('${palestrasActive}', 'class="uk-active"')
-      .replace('${podcastActive}', '').replace('${podcastActive}', '') %>
+      <% var template = require("html-loader!../shared/menu.html"); %>
+      <%=
+      template
+      .split('${homeActive}').join('')
+      .split('${palestrasActive}').join('class="uk-active"')
+      .split('${podcastActive}').join('')
+      %>
     </div>
 
     <!-- scripts -->
