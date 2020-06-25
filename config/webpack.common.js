@@ -115,7 +115,8 @@ module.exports = {
         { from: path.join(__dirname, '../src/browserconfig.xml') },
         { from: path.join(__dirname, '../src/favicon.ico') },
         { from: path.join(__dirname, '../src/safari-pinned-tab.svg') },
-        { from: path.join(__dirname, '../src/manifest.json') }
+        { from: path.join(__dirname, '../src/manifest.json') },
+        { from: path.join(__dirname, '../src/sitemap.xml') }
       ]
     }),
     new MiniCssExtractPlugin({
