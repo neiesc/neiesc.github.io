@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title><%=htmlWebpackPlugin.options.title%></title>
+    <meta name="keywords" content="<%=htmlWebpackPlugin.options.keywords%>" />
+    <meta
+      name="description"
+      content="<%=htmlWebpackPlugin.options.description%>"
+    />
+    <meta name="author" content="<%=htmlWebpackPlugin.options.author%>" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+
+    <link rel="manifest" href="/manifest.json" />
+
+    <link
+      rel="preload"
+      media="screen"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css"
+    />
+
+    <link
+      rel="preload"
+      media="screen"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+    />
+    <link
+      rel="preload"
+      media="screen"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<%=htmlWebpackPlugin.options.title%>" />
+    <meta
+      name="twitter:description"
+      content="<%=htmlWebpackPlugin.options.description%>"
+    />
+    <meta
+      name="twitter:image"
+      content="https://edinei.dev/mstile-150x150.png"
+    />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="<%=htmlWebpackPlugin.options.title%>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://edinei.dev/mstile-150x150.png" />
+    <meta
+      property="og:image:secure_url"
+      content="https://edinei.dev/mstile-150x150.png"
+    />
+    <meta
+      property="og:description"
+      content="<%=htmlWebpackPlugin.options.description%>"
+    />
+  </head>
+
+  <body>
+    <div>
+      <main class="blog"></main>
+
+      <div id="particles-js"></div>
+
+      <% var template = require("html-loader!../shared/menu.html"); %> <%=
+      template .split('${homeActive}').join('')
+      .split('${palestrasActive}').join('class="uk-active"')
+      .split('${podcastActive}').join('') %>
+    </div>
+
+    <!-- scripts -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"
+    ></script>
+
+    <%=require("html-loader!../shared/google_analytics.html")%>
+  </body>
+</html>

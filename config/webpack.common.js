@@ -39,6 +39,16 @@ const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
   author: 'Edinei aka neiesc'
 })
 
+const HtmlWebpackPluginConfigBlog = new HtmlWebpackPlugin({
+  template: path.join(__dirname, '../src/blog/index.html'),
+  filename: 'blog/index.html',
+  minify: minifyOptions,
+  title: `Blog - ${title}`,
+  keywords: 'blog',
+  description: 'Blog.',
+  author: 'Edinei aka neiesc'
+})
+
 const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
   template: path.join(__dirname, '../src/palestras/index.html'),
   filename: 'palestras/index.html',
@@ -99,6 +109,7 @@ module.exports = {
   },
   plugins: [
     HtmlWebpackPluginConfigIndex,
+    HtmlWebpackPluginConfigBlog,
     HtmlWebpackPluginConfigPalestras,
     HtmlWebpackPluginConfigPodcasts,
     new CopyWebpackPlugin({
