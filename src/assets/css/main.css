@@ -7,7 +7,8 @@ body {
 
 .info,
 .podcasts,
-.palestras {
+.palestras,
+.blog {
   display: block;
   position: absolute;
   top: 15%;
@@ -37,6 +38,16 @@ body {
   font-size: 36px;
 }
 
+.blog {
+  width: 1000px;
+}
+
+.blog__post {
+  width: 300px;
+  float: left;
+  margin: 5px;
+}
+
 /* For mobile phones: */
 
 @media only screen and (max-width: 768px) {
@@ -50,7 +61,8 @@ body {
   }
 
   .podcasts,
-  .palestras {
+  .palestras,
+  .blog {
     width: 100%;
   }
 }

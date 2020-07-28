@@ -3,11 +3,11 @@ module.exports = {
     fetch(
       'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/edinei-dev'
     )
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         // Fillter the array
         const res = data.items // This is an array with the content. No feed, no info about author etc..
-        const posts = res.filter((item) => item.categories.length > 0) // That's the main trick* !
+        const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
 
         function toText(node) {
           const tag = document.createElement('div')
@@ -26,23 +26,30 @@ module.exports = {
           output += `
              <li class="blog__post">
                 <a href="${item.link}">
-                   <img src="${item.thumbnail}" class="blog__topImg"></img>
-                   <div class="blog__content">
-                      <div class="blog_preview">
-                         <h2 class="blog__title">${shortenText(item.title, 0, 30) + '...'}</h2>
-                         <p class="blog__intro">${'...' + shortenText(toText(item.content), 60, 300) + '...'}</p>
-                      </div>
-                      <hr>
-                      <div class="blog__info">
-                         <span class="blog__author">${item.author}</span>
-                         <span class="blog__date">${shortenText(item.pubDate, 0, 10)}</span>
-                      </div>
-                   </div>
-                <a/>
+                  <div class="uk-card uk-card-default uk-card-body">
+                    <h3 class="uk-card-title">
+                      <img src="${item.thumbnail}" class="blog__topImg" alt="${
+            shortenText(item.title, 0, 30) + '...'
+          }"></img>
+                      ${shortenText(item.title, 0, 30) + '...'}
+                    </h3>
+                    <p class="blog__intro">${
+                      '...' + shortenText(toText(item.content), 60, 300) + '...'
+                    }</p>
+                    <div class="blog__info">
+                        <span class="blog__author">${item.author}</span>
+                        <span class="blog__date">${shortenText(
+                          item.pubDate,
+                          0,
+                          10
+                        )}</span>
+                    </div>
+                  </div>
+                </a>
              </li>`
         })
 
-        document.querySelector('.blog').innerHTML = output
+        document.querySelector('.blog__posts').innerHTML = output
       })
   }
 }
