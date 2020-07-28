@@ -29,23 +29,13 @@ module.exports = {
                    <img src="${item.thumbnail}" class="blog__topImg"></img>
                    <div class="blog__content">
                       <div class="blog_preview">
-                         <h2 class="blog__title">${
-                           shortenText(item.title, 0, 30) + '...'
-                         }</h2>
-                         <p class="blog__intro">${
-                           '...' +
-                           shortenText(toText(item.content), 60, 300) +
-                           '...'
-                         }</p>
+                         <h2 class="blog__title">${shortenText(item.title, 0, 30) + '...'}</h2>
+                         <p class="blog__intro">${'...' + shortenText(toText(item.content), 60, 300) + '...'}</p>
                       </div>
                       <hr>
                       <div class="blog__info">
                          <span class="blog__author">${item.author}</span>
-                         <span class="blog__date">${shortenText(
-                           item.pubDate,
-                           0,
-                           10
-                         )}</span>
+                         <span class="blog__date">${shortenText(item.pubDate, 0, 10)}</span>
                       </div>
                    </div>
                 <a/>
