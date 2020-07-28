@@ -3,11 +3,11 @@ module.exports = {
     fetch(
       'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/edinei-dev'
     )
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         // Fillter the array
         const res = data.items // This is an array with the content. No feed, no info about author etc..
-        const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
+        const posts = res.filter((item) => item.categories.length > 0) // That's the main trick* !
 
         function toText(node) {
           const tag = document.createElement('div')
