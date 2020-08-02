@@ -155,7 +155,7 @@
       <div id="particles-js"></div>
 
       <% var template = require("html-loader!../shared/menu.html"); %> <%=
-      template .split('${homeActive}').join('')
+      template .split('${homeActive}').join('') .split('${blogActive}').join('')
       .split('${palestrasActive}').join('class="uk-active"')
       .split('${podcastActive}').join('') %>
     </div>

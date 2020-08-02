@@ -86,8 +86,9 @@
 
       <% var template = require("html-loader!../shared/menu.html"); %> <%=
       template .split('${homeActive}').join('')
-      .split('${palestrasActive}').join('class="uk-active"')
-      .split('${podcastActive}').join('') %>
+      .split('${blogActive}').join('class="uk-active"')
+      .split('${palestrasActive}').join('') .split('${podcastActive}').join('')
+      %>
     </div>
 
     <!-- scripts -->

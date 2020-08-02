@@ -42,9 +42,13 @@ body {
   width: 1000px;
 }
 
+.blog__posts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .blog__post {
   width: 300px;
-  float: left;
   margin: 5px;
 }
 
