@@ -28,21 +28,15 @@ module.exports = {
                 <a href="${item.link}">
                   <div class="uk-card uk-card-default uk-card-body">
                     <h3 class="uk-card-title">
-                      <img src="${item.thumbnail}" class="blog__topImg" alt="${
-            shortenText(item.title, 0, 30) + '...'
-          }"></img>
+                      <img src="${item.thumbnail}" class="blog__topImg" alt="${shortenText(item.title, 0, 30) + '...'}">
+                      </img>
                       ${shortenText(item.title, 0, 30) + '...'}
                     </h3>
-                    <p class="blog__intro">${
-                      '...' + shortenText(toText(item.content), 60, 300) + '...'
-                    }</p>
+                    <span class="blog__categories">${item.categories.map(item => ' ' + item)}</span>
+                    <p class="blog__intro">${'...' + shortenText(toText(item.content), 60, 300) + '...'}</p>
                     <div class="blog__info">
                         <span class="blog__author">${item.author}</span>
-                        <span class="blog__date">${shortenText(
-                          item.pubDate,
-                          0,
-                          10
-                        )}</span>
+                        <span class="blog__date">${shortenText(item.pubDate, 0, 10)}</span>
                     </div>
                   </div>
                 </a>
