@@ -1,8 +1,6 @@
 module.exports = {
   init: async function () {
-    fetch(
-      'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/edinei-dev'
-    )
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/edinei-dev')
       .then(res => res.json())
       .then(data => {
         // Fillter the array
@@ -16,9 +14,7 @@ module.exports = {
           return node
         }
         function shortenText(text, startingPoint, maxLength) {
-          return text.length > maxLength
-            ? text.slice(startingPoint, maxLength)
-            : text
+          return text.length > maxLength ? text.slice(startingPoint, maxLength) : text
         }
 
         let output = ''

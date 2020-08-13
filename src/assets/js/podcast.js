@@ -1,9 +1,6 @@
 function compareValues(key, order = 'asc') {
   return function (a, b) {
-    if (
-      !Object.prototype.hasOwnProperty.call(a, key) ||
-      !Object.prototype.hasOwnProperty.call(b, key)
-    ) {
+    if (!Object.prototype.hasOwnProperty.call(a, key) || !Object.prototype.hasOwnProperty.call(b, key)) {
       // property doesn't exist on either object
       return 0
     }

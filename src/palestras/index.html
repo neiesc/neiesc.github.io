@@ -4,15 +4,9 @@
     <meta charset="utf-8" />
     <title><%=htmlWebpackPlugin.options.title%></title>
     <meta name="keywords" content="<%=htmlWebpackPlugin.options.keywords%>" />
-    <meta
-      name="description"
-      content="<%=htmlWebpackPlugin.options.description%>"
-    />
+    <meta name="description" content="<%=htmlWebpackPlugin.options.description%>" />
     <meta name="author" content="<%=htmlWebpackPlugin.options.author%>" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
 
     <link rel="manifest" href="/manifest.json" />
 
@@ -53,27 +47,15 @@
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="<%=htmlWebpackPlugin.options.title%>" />
-    <meta
-      name="twitter:description"
-      content="<%=htmlWebpackPlugin.options.description%>"
-    />
-    <meta
-      name="twitter:image"
-      content="https://edinei.dev/mstile-150x150.png"
-    />
+    <meta name="twitter:description" content="<%=htmlWebpackPlugin.options.description%>" />
+    <meta name="twitter:image" content="https://edinei.dev/mstile-150x150.png" />
 
     <!-- Open Graph data -->
     <meta property="og:title" content="<%=htmlWebpackPlugin.options.title%>" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://edinei.dev/mstile-150x150.png" />
-    <meta
-      property="og:image:secure_url"
-      content="https://edinei.dev/mstile-150x150.png"
-    />
-    <meta
-      property="og:description"
-      content="<%=htmlWebpackPlugin.options.description%>"
-    />
+    <meta property="og:image:secure_url" content="https://edinei.dev/mstile-150x150.png" />
+    <meta property="og:description" content="<%=htmlWebpackPlugin.options.description%>" />
   </head>
 
   <body>
@@ -92,16 +74,13 @@
           </div>
           <div class="timeline-item">
             <div class="timeline-left">
-              <span class="uk-badge uk-badge-danger"
-                ><span uk-icon="heart"></span
-              ></span>
+              <span class="uk-badge uk-badge-danger"><span uk-icon="heart"></span></span>
             </div>
             <div class="timeline-content">
               <div class="uk-card uk-card-default uk-card-body">
                 <h3 class="uk-card-title">
                   <a id="grpc-workshop"></a>
-                  gRPC: Conhecendo novo modelo de comunicação entre
-                  microsserviços
+                  gRPC: Conhecendo novo modelo de comunicação entre microsserviços
                 </h3>
                 <p>
                   <a
@@ -112,19 +91,11 @@
                     >Link da palestra</a
                   >
                   <br />
-                  <a
-                    target="_blank"
-                    href="https://edineicavalcanti.typeform.com/to/LoejEP"
-                    title="Link para feedback"
-                    rel="noopener"
+                  <a target="_blank" href="https://edineicavalcanti.typeform.com/to/LoejEP" title="Link para feedback" rel="noopener"
                     >Link para feedback dos slides</a
                   >
                   <br />
-                  <a
-                    target="_blank"
-                    href="https://github.com/neiesc/Grpc-workshop"
-                    title="Link para códigos no github"
-                    rel="noopener"
+                  <a target="_blank" href="https://github.com/neiesc/Grpc-workshop" title="Link para códigos no github" rel="noopener"
                     >Link para códigos no github</a
                   >
                   <br />
@@ -144,9 +115,7 @@
           </div>
           <div class="timeline-item-finish">
             <div class="timeline-left">
-              <span class="uk-badge uk-badge-danger"
-                ><span uk-icon="triangle-down"></span
-              ></span>
+              <span class="uk-badge uk-badge-danger"><span uk-icon="triangle-down"></span></span>
             </div>
           </div>
         </div>
@@ -154,21 +123,13 @@
 
       <div id="particles-js"></div>
 
-      <% var template = require("html-loader!../shared/menu.html"); %> <%=
-      template .split('${homeActive}').join('') .split('${blogActive}').join('')
-      .split('${palestrasActive}').join('class="uk-active"')
-      .split('${podcastActive}').join('') %>
+      <% var template = require("html-loader!../shared/menu.html"); %> <%= template .split('${homeActive}').join('')
+      .split('${blogActive}').join('') .split('${palestrasActive}').join('class="uk-active"') .split('${podcastActive}').join('') %>
     </div>
 
     <!-- scripts -->
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"
-    ></script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"
-    ></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
 
     <%=require("html-loader!../shared/google_analytics.html")%>
   </body>
