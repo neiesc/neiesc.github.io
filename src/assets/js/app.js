@@ -8,3 +8,8 @@ if (document.querySelector('main.podcasts')) {
   const podcast = require('./podcast')
   podcast.init()
 }
+
+if (document.querySelector('main.blog')) {
+  const blog = require('./blog')
+  blog.init()
+}

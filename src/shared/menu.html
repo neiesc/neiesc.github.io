@@ -3,15 +3,7 @@
     <div class="uk-navbar-left">
       <ul class="uk-navbar-nav">
         <li ${homeActive}><a href="/">Home</a></li>
-        <li>
-          <a
-            target="_blank"
-            href="https://medium.com/edinei-dev"
-            title="Blog"
-            rel="noopener"
-            >Blog</a
-          >
-        </li>
+        <li ${blogActive}><a href="/blog" title="Blog">Blog</a></li>
         <li ${palestrasActive}><a href="/palestras">Palestras</a></li>
         <li ${podcastActive}><a href="/podcasts">Podcasts</a></li>
         <li><a href="#">Projetos (em breve)</a></li>
@@ -20,31 +12,17 @@
     </div>
   </nav>
 </div>
-<div
-  class="uk-hidden@s uk-sticky uk-sticky-fixed"
-  uk-sticky=""
-  style="position: fixed; top: 0px; width: 320px;"
->
+<div class="uk-hidden@s uk-sticky uk-sticky-fixed" uk-sticky="" style="position: fixed; top: 0px; width: 320px;">
   <nav class="uk-navbar uk-navbar-container uk-navbar-transparent uk-margin">
     <div class="uk-navbar-left">
-      <a
-        class="uk-navbar-toggle"
-        href="#menu-devices-small"
-        uk-toggle
-        aria-label="Menu mobile"
-      >
-        <span uk-navbar-toggle-icon="" class="uk-icon uk-navbar-toggle-icon"
-          ><svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-            data-svg="navbar-toggle-icon"
-          >
+      <a class="uk-navbar-toggle" href="#menu-devices-small" uk-toggle aria-label="Menu mobile">
+        <span uk-navbar-toggle-icon="" class="uk-icon uk-navbar-toggle-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="navbar-toggle-icon">
             <rect y="9" width="20" height="2"></rect>
             <rect y="3" width="20" height="2"></rect>
-            <rect y="15" width="20" height="2"></rect></svg
-        ></span>
+            <rect y="15" width="20" height="2"></rect>
+          </svg>
+        </span>
         <span class="uk-margin-small-left"></span>
       </a>
     </div>
@@ -54,45 +32,15 @@
 <div id="menu-devices-small" uk-offcanvas>
   <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
     <button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close>
-      <svg
-        width="14"
-        height="14"
-        viewBox="0 0 14 14"
-        xmlns="http://www.w3.org/2000/svg"
-        data-svg="close-icon"
-      >
-        <line
-          fill="none"
-          stroke="#000"
-          stroke-width="1.1"
-          x1="1"
-          y1="1"
-          x2="13"
-          y2="13"
-        ></line>
-        <line
-          fill="none"
-          stroke="#000"
-          stroke-width="1.1"
-          x1="13"
-          y1="1"
-          x2="1"
-          y2="13"
-        ></line>
+      <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon">
+        <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
+        <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
       </svg>
     </button>
     <h3>Menu</h3>
     <ul class="uk-nav-primary uk-nav-parent-icon uk-nav" uk-nav="">
       <li ${homeActive}><a href="/">Home</a></li>
-      <li>
-        <a
-          target="_blank"
-          href="https://medium.com/edinei-dev"
-          title="Blog"
-          rel="noopener"
-          >Blog</a
-        >
-      </li>
+      <li ${blogActive}><a href="/blog" title="Blog">Blog</a></li>
       <li ${palestrasActive}><a href="/palestras">Palestras</a></li>
       <li ${podcastActive}><a href="/podcasts">Podcasts</a></li>
       <li><a href="#">Projetos (em breve)</a></li>
