@@ -21,7 +21,7 @@ module.exports = {
         posts.forEach(item => {
           output += `
              <li class="blog__post">
-                <a href="${item.link}">
+                <a target="_blank" href="${item.link}" rel="noopener">
                   <div class="uk-card uk-card-default uk-card-body">
                     <h3 class="uk-card-title">
                       <img src="${item.thumbnail}" class="blog__topImg" alt="${shortenText(item.title, 0, 30) + '...'}">
