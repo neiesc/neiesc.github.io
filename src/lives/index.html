@@ -13,7 +13,8 @@
             </div>
             <div class="timeline-content">
               <div class="uk-card uk-card-default uk-card-body">
-                <h3 class="uk-card-title">Palestras</h3>
+                <h3 class="uk-card-title">Lives</h3>
+                <p>Aqui você encontra os links para as próximas lives.</p>
               </div>
             </div>
           </div>
@@ -24,36 +25,23 @@
             <div class="timeline-content">
               <div class="uk-card uk-card-default uk-card-body">
                 <h3 class="uk-card-title">
-                  <a id="grpc-workshop"></a>
-                  gRPC: Conhecendo novo modelo de comunicação entre microsserviços
+                  <a id="social-media"></a>
+                  Twitch
+                  <a
+                    target="_blank"
+                    href="https://twitch.tv/escslabtech"
+                    title="Edinei Cavalcanti - Twitch"
+                    aria-label="Twitch"
+                    rel="noopener"
+                  >
+                    <i class="fab fa-twitch"></i>
+                  </a>
                 </h3>
                 <p>
-                  <a
-                    target="_blank"
-                    href="https://speakerdeck.com/neiesc/grpc-conhecendo-novo-modelo-de-comunicacao-entre-microsservicos"
-                    title="Link da palestra"
-                    rel="noopener"
-                    >Link da palestra</a
-                  >
-                  <br />
-                  <a target="_blank" href="https://edineicavalcanti.typeform.com/to/LoejEP" title="Link para feedback" rel="noopener"
-                    >Link para feedback dos slides</a
-                  >
-                  <br />
-                  <a target="_blank" href="https://github.com/neiesc/Grpc-workshop" title="Link para códigos no github" rel="noopener"
-                    >Link para códigos no github</a
-                  >
-                  <br />
-                  12/04/2020 -
-                  <a
-                    target="_blank"
-                    href="https://www.facebook.com/watch/live/?v=3425279937501243"
-                    title="12/04/2020 - Fatech Talks"
-                    rel="noopener"
-                    >Fatech Talks</a
-                  ><br />
-                  28/02/2020 - OCTO Soluções Corporativas em T.I.<br />
-                  06/11/2019 - Agile Content
+                  Live terças e quintas as
+                  <a target="_blank" href="https://time.is/pt_br/S%C3%A3o_Paulo" title="Time.is" aria-label="Time.is" rel="noopener"
+                    >19:30 horario de Brasília</a
+                  >. Geralmente final de semana também em horários esporádicos.
                 </p>
               </div>
             </div>
@@ -69,7 +57,7 @@
       <div id="particles-js"></div>
 
       <% var template = require("html-loader!../shared/menu.html"); %> <%= template .split('${homeActive}').join('')
-      .split('${blogActive}').join('') .split('${livesActive}').join('') .split('${palestrasActive}').join('class="uk-active"')
+      .split('${blogActive}').join('') .split('${livesActive}').join('class="uk-active"') .split('${palestrasActive}').join('')
       .split('${podcastActive}').join('') %>
     </div>
 
