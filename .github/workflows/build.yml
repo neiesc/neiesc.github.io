@@ -4,8 +4,8 @@ on:
     branches:
       - '*'
       - '*/*'
-      - '!master'
-      - '!develop'
+      - '!gh-pages'
+      - '!main'
 jobs:
   build:
     runs-on: ubuntu-latest
