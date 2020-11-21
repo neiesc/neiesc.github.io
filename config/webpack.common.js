@@ -60,6 +60,17 @@ const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
   author: 'Edinei aka neiesc'
 })
 
+const HtmlWebpackPluginConfigLives = new HtmlWebpackPlugin({
+  template: path.join(__dirname, '../src/lives/index.html'),
+  filename: 'lives/index.html',
+  minify: minifyOptions,
+  title: `Lives - ${title}`,
+  keywords: 'live,lives,twitch',
+  description:
+    'Lista das proximas lives.',
+  author: 'Edinei aka neiesc'
+})
+
 const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
   template: path.join(__dirname, '../src/podcasts/index.html'),
   filename: 'podcasts/index.html',
@@ -110,6 +121,7 @@ module.exports = {
   plugins: [
     HtmlWebpackPluginConfigIndex,
     HtmlWebpackPluginConfigBlog,
+    HtmlWebpackPluginConfigLives,
     HtmlWebpackPluginConfigPalestras,
     HtmlWebpackPluginConfigPodcasts,
     new CopyWebpackPlugin({
