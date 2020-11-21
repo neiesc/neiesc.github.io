@@ -30,6 +30,10 @@ body {
   text-decoration: none;
 }
 
+.info a:hover {
+  color: #666;
+}
+
 .info .profile-picture img {
   border-radius: 50%;
 }
