@@ -130,15 +130,14 @@ module.exports = {
         { from: path.join(__dirname, '../src/config/particles.json') },
         { from: path.join(__dirname, '../src/data/podcasts.json') },
         { from: path.join(__dirname, '../src/android-chrome-192x192.png') },
-        { from: path.join(__dirname, '../src/android-chrome-256x256.png') },
+        { from: path.join(__dirname, '../src/android-chrome-384x384.png') },
         { from: path.join(__dirname, '../src/apple-touch-icon.png') },
+        { from: path.join(__dirname, '../src/browserconfig.xml') },
         { from: path.join(__dirname, '../src/favicon-16x16.png') },
         { from: path.join(__dirname, '../src/favicon-32x32.png') },
         { from: path.join(__dirname, '../src/mstile-150x150.png') },
-        { from: path.join(__dirname, '../src/browserconfig.xml') },
-        { from: path.join(__dirname, '../src/favicon.ico') },
         { from: path.join(__dirname, '../src/safari-pinned-tab.svg') },
-        { from: path.join(__dirname, '../src/manifest.json') },
+        { from: path.join(__dirname, '../src/site.webmanifest') },
         { from: path.join(__dirname, '../src/sitemap.xml') }
       ]
     }),
