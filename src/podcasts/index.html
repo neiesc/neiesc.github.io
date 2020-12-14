@@ -4,29 +4,27 @@
   .split('${title}').join(htmlWebpackPlugin.options.title) .split('${keywords}').join(htmlWebpackPlugin.options.keywords)
   .split('${description}').join(htmlWebpackPlugin.options.description) .split('${author}').join(htmlWebpackPlugin.options.author) %>
   <body>
-    <div>
-      <main class="podcasts">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-left">
-              <span class="uk-badge"><span uk-icon="triangle-up"></span></span>
-            </div>
-            <div class="timeline-content">
-              <div class="uk-card uk-card-default uk-card-body">
-                <h3 class="uk-card-title">Podcasts</h3>
-              </div>
+    <main class="podcasts">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="uk-badge"><span uk-icon="triangle-up"></span></span>
+          </div>
+          <div class="timeline-content">
+            <div class="uk-card uk-card-default uk-card-body">
+              <h3 class="uk-card-title">Podcasts</h3>
             </div>
           </div>
-          <!-- Load from podcasts.json -->
         </div>
-      </main>
+        <!-- Load from podcasts.json -->
+      </div>
+    </main>
 
-      <div id="particles-js"></div>
+    <div id="particles-js"></div>
 
-      <% var template = require("html-loader!../shared/menu.html"); %> <%= template .split('${homeActive}').join('')
-      .split('${blogActive}').join('') .split('${live Active}').join('') .split('${palestrasActive}').join('')
-      .split('${podcastActive}').join('class="uk-active"') %>
-    </div>
+    <% var template = require("html-loader!../shared/menu.html"); %> <%= template .split('${homeActive}').join('')
+    .split('${blogActive}').join('') .split('${live Active}').join('') .split('${palestrasActive}').join('')
+    .split('${podcastActive}').join('class="uk-active"') %>
 
     <!-- scripts -->
     <%=require("html-loader!../shared/footer_uikit.html")%> <%=require("html-loader!../shared/google_analytics.html")%>
