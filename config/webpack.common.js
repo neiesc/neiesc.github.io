@@ -49,17 +49,6 @@ const HtmlWebpackPluginConfigBlog = new HtmlWebpackPlugin({
   author: 'Edinei aka neiesc'
 })
 
-const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/palestras/index.html'),
-  filename: 'palestras/index.html',
-  minify: minifyOptions,
-  title: `Palestras - ${title}`,
-  keywords: 'palestras,eventos,workshop',
-  description:
-    'Lista das palestras (Palestra, Eventos ou Workshop) que palestrei.',
-  author: 'Edinei aka neiesc'
-})
-
 const HtmlWebpackPluginConfigLive = new HtmlWebpackPlugin({
   template: path.join(__dirname, '../src/live/index.html'),
   filename: 'live/index.html',
@@ -71,6 +60,17 @@ const HtmlWebpackPluginConfigLive = new HtmlWebpackPlugin({
   author: 'Edinei aka neiesc'
 })
 
+const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
+  template: path.join(__dirname, '../src/palestras/index.html'),
+  filename: 'palestras/index.html',
+  minify: minifyOptions,
+  title: `Palestras - ${title}`,
+  keywords: 'palestras,eventos,workshop',
+  description:
+    'Lista das palestras (Palestra, Eventos ou Workshop) que palestrei.',
+  author: 'Edinei aka neiesc'
+})
+
 const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
   template: path.join(__dirname, '../src/podcasts/index.html'),
   filename: 'podcasts/index.html',
@@ -78,6 +78,16 @@ const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
   title: `Podcasts - ${title}`,
   keywords: 'podcasts,podcast',
   description: 'Lista dos podcasts que eu constumo escutar.',
+  author: 'Edinei aka neiesc'
+})
+
+const HtmlWebpackPluginConfigProjects = new HtmlWebpackPlugin({
+  template: path.join(__dirname, '../src/projects/index.html'),
+  filename: 'projects/index.html',
+  minify: minifyOptions,
+  title: `Projects - ${title}`,
+  keywords: 'projects,opensource,codigolivre',
+  description: 'Lista dos projetos.',
   author: 'Edinei aka neiesc'
 })
 
@@ -124,6 +134,7 @@ module.exports = {
     HtmlWebpackPluginConfigLive,
     HtmlWebpackPluginConfigPalestras,
     HtmlWebpackPluginConfigPodcasts,
+    HtmlWebpackPluginConfigProjects,
     new CopyWebpackPlugin({
       patterns: [
         { from: path.join(__dirname, '../src/CNAME') },
