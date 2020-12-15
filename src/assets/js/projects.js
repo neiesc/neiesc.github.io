@@ -2,12 +2,12 @@ const helpers = require('./helpers')
 
 module.exports = {
   init: async function () {
-    const response = await fetch('/podcasts.json')
-    const podcasts = await response.json()
+    const response = await fetch('/projects.json')
+    const projects = await response.json()
 
-    podcasts.sort(helpers.compareValues('title'))
+    projects.sort(helpers.compareValues('title'))
 
-    podcasts.forEach(podcast => {
+    projects.forEach(project => {
       const timelineItem = document.createElement('div')
       timelineItem.className = 'timeline-item'
       timelineItem.innerHTML = `
@@ -16,7 +16,10 @@ module.exports = {
       </div>
       <div class="timeline-content">
         <div class="uk-card uk-card-default uk-card-body">
-            <h3 class="uk-card-title"><a href="${podcast.url}" target="_blank" rel="noopener">${podcast.title}</a></h3>
+            <h3 class="uk-card-title">
+              <a href="${project.url}" target="_blank" rel="noopener">${project.title}</a><br />
+              License: ${project.license}
+            </h3>
         </div>
       </div>`
       document.querySelector('div.timeline').appendChild(timelineItem)

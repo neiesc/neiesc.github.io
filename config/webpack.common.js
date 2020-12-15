@@ -140,6 +140,7 @@ module.exports = {
         { from: path.join(__dirname, '../src/CNAME') },
         { from: path.join(__dirname, '../src/config/particles.json') },
         { from: path.join(__dirname, '../src/data/podcasts.json') },
+        { from: path.join(__dirname, '../src/data/projects.json') },
         { from: path.join(__dirname, '../src/android-chrome-192x192.png') },
         { from: path.join(__dirname, '../src/android-chrome-384x384.png') },
         { from: path.join(__dirname, '../src/apple-touch-icon.png') },
