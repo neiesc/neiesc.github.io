@@ -6,9 +6,10 @@ body {
 }
 
 .info,
-.podcasts,
+.blog,
 .palestras,
-.blog {
+.podcasts,
+.projects {
   display: block;
   position: absolute;
   top: 15%;
@@ -68,9 +69,10 @@ body {
     width: 50%;
   }
 
-  .podcasts,
+  .blog,
   .palestras,
-  .blog {
+  .podcasts,
+  .projects {
     width: 100%;
   }
 }

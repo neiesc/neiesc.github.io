@@ -4,7 +4,7 @@
   .split('${title}').join(htmlWebpackPlugin.options.title) .split('${keywords}').join(htmlWebpackPlugin.options.keywords)
   .split('${description}').join(htmlWebpackPlugin.options.description) .split('${author}').join(htmlWebpackPlugin.options.author) %>
   <body>
-    <main class="podcasts">
+    <main class="projects">
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-left">
@@ -12,11 +12,15 @@
           </div>
           <div class="timeline-content">
             <div class="uk-card uk-card-default uk-card-body">
-              <h3 class="uk-card-title">Podcasts</h3>
+              <h3 class="uk-card-title">Projetos</h3>
+              <p>
+                Aqui você encontra os principais projetos, mas voçe pode encontrar mais no meu 
+                <a target="_blank" href="https://github.com/neiesc" title="Edinei Cavalcanti - GitHub" rel="noopener">github</a>.
+              </p>
             </div>
           </div>
         </div>
-        <!-- Load from podcasts.json -->
+        <!-- Load from projects.json -->
       </div>
     </main>
 
@@ -24,7 +28,7 @@
 
     <% var template = require("html-loader!../shared/menu.html"); %> <%= template .split('${homeActive}').join('')
     .split('${blogActive}').join('') .split('${live Active}').join('') .split('${palestrasActive}').join('')
-    .split('${podcastActive}').join('class="uk-active"') .split('${projetcsActive}').join('')%>
+    .split('${podcastActive}').join('') .split('${projetcsActive}').join('class="uk-active"')%>
 
     <!-- scripts -->
     <%=require("html-loader!../shared/footer_uikit.html")%> <%=require("html-loader!../shared/google_analytics.html")%>
