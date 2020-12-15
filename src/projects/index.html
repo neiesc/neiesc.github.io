@@ -24,7 +24,7 @@
 
     <% var template = require("html-loader!../shared/menu.html"); %> <%= template .split('${homeActive}').join('')
     .split('${blogActive}').join('') .split('${live Active}').join('') .split('${palestrasActive}').join('')
-    .split('${podcastActive}').join('class="uk-active"') %>
+    .split('${podcastActive}').join('') .split('${projetcsActive}').join('class="uk-active"')%>
 
     <!-- scripts -->
     <%=require("html-loader!../shared/footer_uikit.html")%> <%=require("html-loader!../shared/google_analytics.html")%>
