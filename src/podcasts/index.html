@@ -13,6 +13,7 @@
           <div class="timeline-content">
             <div class="uk-card uk-card-default uk-card-body">
               <h3 class="uk-card-title">Podcasts</h3>
+              <p>Segue uma relação de podcasts que eu curto e recomendo.</p>
             </div>
           </div>
         </div>
@@ -23,11 +24,8 @@
     <div id="particles-js"></div>
 
     <% var template = require("html-loader!../shared/menu.html"); %> <%= template .split('${homeActive}').join('')
-    .split('${blogActive}').join('')
-    .split('${live Active}').join('')
-    .split('${youtubeActive}').join('')
-    .split('${palestrasActive}').join('')
-    .split('${podcastActive}').join('class="uk-active"') .split('${projetcsActive}').join('')%>
+    .split('${blogActive}').join('') .split('${live Active}').join('') .split('${youtubeActive}').join('')
+    .split('${palestrasActive}').join('') .split('${podcastActive}').join('class="uk-active"') .split('${projetcsActive}').join('')%>
 
     <!-- scripts -->
     <%=require("html-loader!../shared/footer_uikit.html")%> <%=require("html-loader!../shared/google_analytics.html")%>
