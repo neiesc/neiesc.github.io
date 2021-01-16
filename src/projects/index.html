@@ -14,7 +14,7 @@
             <div class="uk-card uk-card-default uk-card-body">
               <h3 class="uk-card-title">Projetos</h3>
               <p>
-                Aqui você encontra os principais projetos, mas voçe pode encontrar mais no meu 
+                Aqui você encontra os principais projetos, mas voçe pode encontrar mais no meu
                 <a target="_blank" href="https://github.com/neiesc" title="Edinei Cavalcanti - GitHub" rel="noopener">github</a>.
               </p>
             </div>
@@ -27,7 +27,9 @@
     <div id="particles-js"></div>
 
     <% var template = require("html-loader!../shared/menu.html"); %> <%= template .split('${homeActive}').join('')
-    .split('${blogActive}').join('') .split('${live Active}').join('') .split('${palestrasActive}').join('')
+    .split('${blogActive}').join('') .split('${live Active}').join('')
+    .split('${youtubeActive}').join('')
+    .split('${palestrasActive}').join('')
     .split('${podcastActive}').join('') .split('${projetcsActive}').join('class="uk-active"')%>
 
     <!-- scripts -->
