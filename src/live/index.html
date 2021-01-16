@@ -26,14 +26,13 @@
               <div class="uk-card uk-card-default uk-card-body">
                 <h3 class="uk-card-title">
                   <a id="social-media"></a>
-                  Twitch
                   <a
-                    target="_blank"
-                    href="https://twitch.tv/edineidev"
-                    title="Edinei Cavalcanti - Twitch"
-                    aria-label="Twitch"
-                    rel="noopener"
-                  >
+                  target="_blank"
+                  href="https://twitch.tv/edineidev"
+                  title="Edinei Cavalcanti - Twitch"
+                  aria-label="Twitch"
+                  rel="noopener">
+                    Twitch
                     <i class="fab fa-twitch"></i>
                   </a>
                 </h3>
@@ -57,7 +56,10 @@
       <div id="particles-js"></div>
 
       <% var template = require("html-loader!../shared/menu.html"); %> <%= template .split('${homeActive}').join('')
-      .split('${blogActive}').join('') .split('${liveActive}').join('class="uk-active"') .split('${palestrasActive}').join('')
+      .split('${blogActive}').join('')
+      .split('${liveActive}').join('class="uk-active"')
+      .split('${youtubeActive}').join('')
+      .split('${palestrasActive}').join('')
       .split('${podcastActive}').join('') .split('${projetcsActive}').join('') %>
     </div>
 

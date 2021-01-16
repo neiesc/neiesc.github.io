@@ -23,7 +23,10 @@
     <div id="particles-js"></div>
 
     <% var template = require("html-loader!../shared/menu.html"); %> <%= template .split('${homeActive}').join('')
-    .split('${blogActive}').join('') .split('${live Active}').join('') .split('${palestrasActive}').join('')
+    .split('${blogActive}').join('')
+    .split('${live Active}').join('')
+    .split('${youtubeActive}').join('')
+    .split('${palestrasActive}').join('')
     .split('${podcastActive}').join('class="uk-active"') .split('${projetcsActive}').join('')%>
 
     <!-- scripts -->

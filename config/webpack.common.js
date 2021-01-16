@@ -91,6 +91,16 @@ const HtmlWebpackPluginConfigProjects = new HtmlWebpackPlugin({
   author: 'Edinei aka neiesc'
 })
 
+const HtmlWebpackPluginConfigYoutube = new HtmlWebpackPlugin({
+  template: path.join(__dirname, '../src/youtube/index.html'),
+  filename: 'youtube/index.html',
+  minify: minifyOptions,
+  title: `Youtube - ${title}`,
+  keywords: 'youtube,videos,programming,programação,software',
+  description: 'Meu canal no youtube.',
+  author: 'Edinei aka neiesc'
+})
+
 module.exports = {
   entry: ['babel-polyfill', path.join(__dirname, '../src/assets/js/app.js')],
   output: {
@@ -135,6 +145,7 @@ module.exports = {
     HtmlWebpackPluginConfigPalestras,
     HtmlWebpackPluginConfigPodcasts,
     HtmlWebpackPluginConfigProjects,
+    HtmlWebpackPluginConfigYoutube,
     new CopyWebpackPlugin({
       patterns: [
         { from: path.join(__dirname, '../src/CNAME') },
