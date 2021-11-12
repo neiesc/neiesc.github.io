@@ -10,19 +10,18 @@
 ## System Requirements
 
 - **[NodeJS](https://nodejs.org/en/)**
-- **[Yarn](https://yarnpkg.com/en/)**
 
 ## Installing
 
-- `yarn`
+- `npm install`
 
 ## Running Application and open browser
 
-- `yarn serve`
+- `npm run serve`
 
 ## All command
 
-- `yarn serve`
-- `yarn build`
-- `yarn prettify`
-- `yarn lint`
+- `npm run serve`
+- `npm run build`
+- `npm run prettify`
+- `npm run lint`
