@@ -8,8 +8,8 @@
     "portfolio"
   ],
   "scripts": {
-    "serve": "yarn prettify && yarn lint && webpack serve --config config/webpack.dev.js",
-    "build": "yarn prettify && yarn lint && webpack --config config/webpack.prod.js",
+    "serve": "npm run prettify && npm run lint && webpack serve --config config/webpack.dev.js",
+    "build": "npm run prettify && npm run lint && webpack --config config/webpack.prod.js",
     "prettify": "prettier src/** --write",
     "lint": "eslint src"
   },
