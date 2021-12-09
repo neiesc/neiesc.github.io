@@ -13,15 +13,30 @@
 
 ## Installing
 
-- `npm install`
+```console
+npm install
+```
 
 ## Running Application and open browser
 
-- `npm run serve`
+```console
+npm run serve
+```
 
 ## All command
 
-- `npm run serve`
-- `npm run build`
-- `npm run prettify`
-- `npm run lint`
+```console
+npm run serve
+```
+
+```console
+npm run build
+```
+
+```console
+npm run prettify
+```
+
+```console
+npm run lint
+```
