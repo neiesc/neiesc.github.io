@@ -9,7 +9,7 @@
 ## System Requirements
 
 - **[NodeJS](https://nodejs.org/en/)**
-
+- NPM
 ## Installing
 
 ```console
