@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const TerserPlugin = require("terser-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
@@ -25,7 +25,7 @@ const minifyOptions = {
 const title = 'Edinei Cavalcanti'
 
 const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/index.html'),
+  template: path.join(__dirname, '../src/index.ejs'),
   filename: 'index.html',
   minify: minifyOptions,
   title,
@@ -39,7 +39,7 @@ const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
 })
 
 const HtmlWebpackPluginConfigBlog = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/blog/index.html'),
+  template: path.join(__dirname, '../src/blog/index.ejs'),
   filename: 'blog/index.html',
   minify: minifyOptions,
   title: `Blog - ${title}`,
@@ -49,7 +49,7 @@ const HtmlWebpackPluginConfigBlog = new HtmlWebpackPlugin({
 })
 
 const HtmlWebpackPluginConfigLive = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/live/index.html'),
+  template: path.join(__dirname, '../src/live/index.ejs'),
   filename: 'live/index.html',
   minify: minifyOptions,
   title: `Live - ${title}`,
@@ -60,7 +60,7 @@ const HtmlWebpackPluginConfigLive = new HtmlWebpackPlugin({
 })
 
 const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/palestras/index.html'),
+  template: path.join(__dirname, '../src/palestras/index.ejs'),
   filename: 'palestras/index.html',
   minify: minifyOptions,
   title: `Palestras - ${title}`,
@@ -71,7 +71,7 @@ const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
 })
 
 const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/podcasts/index.html'),
+  template: path.join(__dirname, '../src/podcasts/index.ejs'),
   filename: 'podcasts/index.html',
   minify: minifyOptions,
   title: `Podcasts - ${title}`,
@@ -81,7 +81,7 @@ const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
 })
 
 const HtmlWebpackPluginConfigProjects = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/projects/index.html'),
+  template: path.join(__dirname, '../src/projects/index.ejs'),
   filename: 'projects/index.html',
   minify: minifyOptions,
   title: `Projects - ${title}`,
@@ -91,7 +91,7 @@ const HtmlWebpackPluginConfigProjects = new HtmlWebpackPlugin({
 })
 
 const HtmlWebpackPluginConfigYoutube = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/youtube/index.html'),
+  template: path.join(__dirname, '../src/youtube/index.ejs'),
   filename: 'youtube/index.html',
   minify: minifyOptions,
   title: `Youtube - ${title}`,
@@ -115,8 +115,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html$/i,
-        loader: "html-loader",
+        test: /\.ejs$/,
+        use: {
+          loader: 'ejs-compiled-loader'
+        }
       },
       {
         test: /\.css$/,

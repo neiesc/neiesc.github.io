@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <% var templateHead = require("html-loader!../shared/head.html"); %> <%= templateHead
-  .split('${title}').join(htmlWebpackPlugin.options.title) .split('${keywords}').join(htmlWebpackPlugin.options.keywords)
-  .split('${description}').join(htmlWebpackPlugin.options.description) .split('${author}').join(htmlWebpackPlugin.options.author) %>
+  <%- include ../shared/head.ejs -%>
   <body>
     <div>
       <main class="palestras">
@@ -72,13 +70,11 @@
       </main>
 
       <div id="particles-js"></div>
-
-      <% var template = require("html-loader!../shared/menu.html"); %> <%= template .split('${homeActive}').join('')
-      .split('${blogActive}').join('') .split('${liveActive}').join('') .split('${youtubeActive}').join('')
-      .split('${palestrasActive}').join('class="uk-active"') .split('${podcastActive}').join('') .split('${projetcsActive}').join('') %>
+      <%- include ../shared/menu.ejs -%>
     </div>
 
     <!-- scripts -->
-    <%=require("html-loader!../shared/footer_uikit.html")%> <%=require("html-loader!../shared/google_analytics.html")%>
+    <%- include ../shared/footer_uikit.ejs -%>
+    <%- include ../shared/google_analytics.ejs -%>
   </body>
 </html>

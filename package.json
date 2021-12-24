@@ -8,8 +8,8 @@
     "portfolio"
   ],
   "scripts": {
-    "serve": "npm run prettify && npm run lint && webpack serve --config config/webpack.dev.js",
-    "build": "npm run prettify && npm run lint && webpack --config config/webpack.prod.js",
+    "serve": "npm run lint && webpack serve --config config/webpack.dev.js",
+    "build": "npm run lint && webpack --config config/webpack.prod.js",
     "prettify": "prettier src/** --write",
     "lint": "eslint src"
   },
@@ -28,6 +28,7 @@
     "babel-polyfill": "^6.26.0",
     "copy-webpack-plugin": "^10.0.0",
     "css-loader": "^6.5.1",
+    "ejs-compiled-loader": "^3.1.0",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.3",
