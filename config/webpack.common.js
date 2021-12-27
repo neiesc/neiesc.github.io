@@ -35,7 +35,8 @@ const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
   Começei profissionalmente em 2010 minha carreira, sólido conhecimente em TI,
   mais especificamente em desenvolvimento de software em C#, .NET, .NET Core, Node.js e Python
   com experiência em grandes aplicações.`,
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'home'
 })
 
 const HtmlWebpackPluginConfigBlog = new HtmlWebpackPlugin({
@@ -45,7 +46,8 @@ const HtmlWebpackPluginConfigBlog = new HtmlWebpackPlugin({
   title: `Blog - ${title}`,
   keywords: 'blog',
   description: 'Blog.',
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'blog'
 })
 
 const HtmlWebpackPluginConfigLive = new HtmlWebpackPlugin({
@@ -56,7 +58,8 @@ const HtmlWebpackPluginConfigLive = new HtmlWebpackPlugin({
   keywords: 'live,twitch',
   description:
     'Lista das proximas live.',
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'live'
 })
 
 const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
@@ -67,7 +70,8 @@ const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
   keywords: 'palestras,eventos,workshop',
   description:
     'Lista das palestras (Palestra, Eventos ou Workshop) que palestrei.',
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'palestra'
 })
 
 const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
@@ -77,7 +81,8 @@ const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
   title: `Podcasts - ${title}`,
   keywords: 'podcasts,podcast',
   description: 'Lista dos podcasts que eu constumo escutar.',
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'podcast'
 })
 
 const HtmlWebpackPluginConfigProjects = new HtmlWebpackPlugin({
@@ -87,7 +92,8 @@ const HtmlWebpackPluginConfigProjects = new HtmlWebpackPlugin({
   title: `Projects - ${title}`,
   keywords: 'projects,opensource,codigolivre',
   description: 'Lista dos projetos.',
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'project'
 })
 
 const HtmlWebpackPluginConfigYoutube = new HtmlWebpackPlugin({
@@ -97,7 +103,8 @@ const HtmlWebpackPluginConfigYoutube = new HtmlWebpackPlugin({
   title: `Youtube - ${title}`,
   keywords: 'youtube,videos,programming,programação,software',
   description: 'Meu canal no youtube.',
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'youtube'
 })
 
 module.exports = {

@@ -2,13 +2,13 @@
   <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
     <div class="uk-navbar-left">
       <ul class="uk-navbar-nav">
-        <li ${homeActive}><a href="/">Home</a></li>
-        <li ${blogActive}><a href="/blog" title="Blog">Blog</a></li>
-        <li ${liveActive}><a href="/live">Live</a></li>
-        <li ${youtubeActive}><a href="/youtube">Youtube</a></li>
-        <li ${palestrasActive}><a href="/palestras">Palestras</a></li>
-        <li ${projetcsActive}><a href="/projects">Projetos</a></li>
-        <li ${podcastActive}><a href="/podcasts">Podcasts</a></li>
+        <li <%=htmlWebpackPlugin.options.menu === "home" ? "class='uk-active'" : ""%>><a href="/">Home</a></li>
+        <li <%=htmlWebpackPlugin.options.menu === "blog" ? "class='uk-active'" : ""%>><a href="/blog" title="Blog">Blog</a></li>
+        <li <%=htmlWebpackPlugin.options.menu === "live" ? "class='uk-active'" : ""%>><a href="/live">Live</a></li>
+        <li <%=htmlWebpackPlugin.options.menu === "youtube" ? "class='uk-active'" : ""%>><a href="/youtube">Youtube</a></li>
+        <li <%=htmlWebpackPlugin.options.menu === "palestra" ? "class='uk-active'" : ""%>><a href="/palestras">Palestras</a></li>
+        <li <%=htmlWebpackPlugin.options.menu === "project" ? "class='uk-active'" : ""%>><a href="/projects">Projetos</a></li>
+        <li <%=htmlWebpackPlugin.options.menu === "podcast" ? "class='uk-active'" : ""%>><a href="/podcasts">Podcasts</a></li>
       </ul>
     </div>
   </nav>
@@ -39,14 +39,14 @@
       </svg>
     </button>
     <h3>Menu</h3>
-    <ul class="uk-nav-primary uk-nav-parent-icon uk-nav" uk-nav="">
-      <li ${homeActive}><a href="/">Home</a></li>
-      <li ${blogActive}><a href="/blog" title="Blog">Blog</a></li>
-      <li ${liveActive}><a href="/live">Live</a></li>
-      <li ${youtubeActive}><a href="/youtube">Youtube</a></li>
-      <li ${palestrasActive}><a href="/palestras">Palestras</a></li>
-      <li ${projetcsActive}><a href="/projects">Projetos</a></li>
-      <li ${podcastActive}><a href="/podcasts">Podcasts</a></li>
+    <ul class="uk-nav-primary uk-nav-parent-icon uk-nav" uk-nav="">>
+      <li <%=htmlWebpackPlugin.options.menu === "home" ? "class='uk-active'" : ""%>><a href="/">Home</a></li>
+      <li <%=htmlWebpackPlugin.options.menu === "blog" ? "class='uk-active'" : ""%>><a href="/blog" title="Blog">Blog</a></li>
+      <li <%=htmlWebpackPlugin.options.menu === "live" ? "class='uk-active'" : ""%>><a href="/live">Live</a></li>
+      <li <%=htmlWebpackPlugin.options.menu === "youtube" ? "class='uk-active'" : ""%>><a href="/youtube">Youtube</a></li>
+      <li <%=htmlWebpackPlugin.options.menu === "palestra" ? "class='uk-active'" : ""%>><a href="/palestras">Palestras</a></li>
+      <li <%=htmlWebpackPlugin.options.menu === "project" ? "class='uk-active'" : ""%>><a href="/projects">Projetos</a></li>
+      <li <%=htmlWebpackPlugin.options.menu === "podcast" ? "class='uk-active'" : ""%>><a href="/podcasts">Podcasts</a></li>
     </ul>
   </div>
 </div>
