@@ -163,6 +163,7 @@ module.exports = {
         { from: path.join(__dirname, '../src/data/projects.json') },
         { from: path.join(__dirname, '../src/android-chrome-192x192.png') },
         { from: path.join(__dirname, '../src/android-chrome-384x384.png') },
+        { from: path.join(__dirname, '../src/android-chrome-512x512.png') },
         { from: path.join(__dirname, '../src/apple-touch-icon.png') },
         { from: path.join(__dirname, '../src/browserconfig.xml') },
         { from: path.join(__dirname, '../src/favicon-16x16.png') },
