@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
@@ -25,7 +25,7 @@ const minifyOptions = {
 const title = 'Edinei Cavalcanti'
 
 const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/index.html'),
+  template: path.join(__dirname, '../src/index.ejs'),
   filename: 'index.html',
   minify: minifyOptions,
   title,
@@ -35,69 +35,76 @@ const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
   Começei profissionalmente em 2010 minha carreira, sólido conhecimente em TI,
   mais especificamente em desenvolvimento de software em C#, .NET, .NET Core, Node.js e Python
   com experiência em grandes aplicações.`,
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'home'
 })
 
 const HtmlWebpackPluginConfigBlog = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/blog/index.html'),
+  template: path.join(__dirname, '../src/blog/index.ejs'),
   filename: 'blog/index.html',
   minify: minifyOptions,
   title: `Blog - ${title}`,
   keywords: 'blog',
   description: 'Blog.',
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'blog'
 })
 
 const HtmlWebpackPluginConfigLive = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/live/index.html'),
+  template: path.join(__dirname, '../src/live/index.ejs'),
   filename: 'live/index.html',
   minify: minifyOptions,
   title: `Live - ${title}`,
   keywords: 'live,twitch',
   description:
     'Lista das proximas live.',
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'live'
 })
 
 const HtmlWebpackPluginConfigPalestras = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/palestras/index.html'),
+  template: path.join(__dirname, '../src/palestras/index.ejs'),
   filename: 'palestras/index.html',
   minify: minifyOptions,
   title: `Palestras - ${title}`,
   keywords: 'palestras,eventos,workshop',
   description:
     'Lista das palestras (Palestra, Eventos ou Workshop) que palestrei.',
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'palestra'
 })
 
 const HtmlWebpackPluginConfigPodcasts = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/podcasts/index.html'),
+  template: path.join(__dirname, '../src/podcasts/index.ejs'),
   filename: 'podcasts/index.html',
   minify: minifyOptions,
   title: `Podcasts - ${title}`,
   keywords: 'podcasts,podcast',
   description: 'Lista dos podcasts que eu constumo escutar.',
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'podcast'
 })
 
 const HtmlWebpackPluginConfigProjects = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/projects/index.html'),
+  template: path.join(__dirname, '../src/projects/index.ejs'),
   filename: 'projects/index.html',
   minify: minifyOptions,
   title: `Projects - ${title}`,
   keywords: 'projects,opensource,codigolivre',
   description: 'Lista dos projetos.',
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'project'
 })
 
 const HtmlWebpackPluginConfigYoutube = new HtmlWebpackPlugin({
-  template: path.join(__dirname, '../src/youtube/index.html'),
+  template: path.join(__dirname, '../src/youtube/index.ejs'),
   filename: 'youtube/index.html',
   minify: minifyOptions,
   title: `Youtube - ${title}`,
   keywords: 'youtube,videos,programming,programação,software',
   description: 'Meu canal no youtube.',
-  author: 'Edinei aka neiesc'
+  author: 'Edinei aka neiesc',
+  menu: 'youtube'
 })
 
 module.exports = {
@@ -106,17 +113,20 @@ module.exports = {
     publicPath: '/'
   },
   optimization: {
+    minimize: true,
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true
-      }),
+      new TerserPlugin(),
       new OptimizeCSSAssetsPlugin({})
     ]
   },
   module: {
     rules: [
+      {
+        test: /\.ejs$/,
+        use: {
+          loader: 'ejs-compiled-loader'
+        }
+      },
       {
         test: /\.css$/,
         use: [
