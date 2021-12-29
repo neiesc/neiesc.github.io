@@ -96,6 +96,18 @@ const HtmlWebpackPluginConfigProjects = new HtmlWebpackPlugin({
   menu: 'project'
 })
 
+
+const HtmlWebpackPluginConfigRecommends = new HtmlWebpackPlugin({
+  template: path.join(__dirname, '../src/recommends/index.ejs'),
+  filename: 'recommends/index.html',
+  minify: minifyOptions,
+  title: `Recomendações - ${title}`,
+  keywords: 'recommends,recomendações,opensource,codigolivre',
+  description: 'Recomendações.',
+  author: 'Edinei aka neiesc',
+  menu: 'recommends'
+})
+
 const HtmlWebpackPluginConfigYoutube = new HtmlWebpackPlugin({
   template: path.join(__dirname, '../src/youtube/index.ejs'),
   filename: 'youtube/index.html',
@@ -154,6 +166,7 @@ module.exports = {
     HtmlWebpackPluginConfigPalestras,
     HtmlWebpackPluginConfigPodcasts,
     HtmlWebpackPluginConfigProjects,
+    HtmlWebpackPluginConfigRecommends,
     HtmlWebpackPluginConfigYoutube,
     new CopyWebpackPlugin({
       patterns: [
@@ -171,7 +184,10 @@ module.exports = {
         { from: path.join(__dirname, '../src/mstile-150x150.png') },
         { from: path.join(__dirname, '../src/safari-pinned-tab.svg') },
         { from: path.join(__dirname, '../src/site.webmanifest') },
-        { from: path.join(__dirname, '../src/sitemap.xml') }
+        { from: path.join(__dirname, '../src/sitemap.xml') },
+        { from: path.join(__dirname, '../src/assets/img/chris.jpg') },
+        { from: path.join(__dirname, '../src/assets/img/wilson.jpg') },
+        { from: path.join(__dirname, '../src/assets/img/diogo.jpg') }
       ]
     }),
     new MiniCssExtractPlugin({

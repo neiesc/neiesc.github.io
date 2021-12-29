@@ -3,6 +3,7 @@
     <div class="uk-navbar-left">
       <ul class="uk-navbar-nav">
         <li <%=htmlWebpackPlugin.options.menu === "home" ? "class='uk-active'" : ""%>><a href="/">Home</a></li>
+        <li <%=htmlWebpackPlugin.options.menu === "recommends" ? "class='uk-active'" : ""%>><a href="/recommends">Recomendação</a></li>
         <li <%=htmlWebpackPlugin.options.menu === "blog" ? "class='uk-active'" : ""%>><a href="/blog" title="Blog">Blog</a></li>
         <li <%=htmlWebpackPlugin.options.menu === "live" ? "class='uk-active'" : ""%>><a href="/live">Live</a></li>
         <li <%=htmlWebpackPlugin.options.menu === "youtube" ? "class='uk-active'" : ""%>><a href="/youtube">Youtube</a></li>
@@ -39,8 +40,9 @@
       </svg>
     </button>
     <h3>Menu</h3>
-    <ul class="uk-nav-primary uk-nav-parent-icon uk-nav" uk-nav="">>
+    <ul class="uk-nav-primary uk-nav-parent-icon uk-nav" uk-nav="">
       <li <%=htmlWebpackPlugin.options.menu === "home" ? "class='uk-active'" : ""%>><a href="/">Home</a></li>
+      <li <%=htmlWebpackPlugin.options.menu === "recommends" ? "class='uk-active'" : ""%>><a href="/recommends">Recomendação</a></li>
       <li <%=htmlWebpackPlugin.options.menu === "blog" ? "class='uk-active'" : ""%>><a href="/blog" title="Blog">Blog</a></li>
       <li <%=htmlWebpackPlugin.options.menu === "live" ? "class='uk-active'" : ""%>><a href="/live">Live</a></li>
       <li <%=htmlWebpackPlugin.options.menu === "youtube" ? "class='uk-active'" : ""%>><a href="/youtube">Youtube</a></li>
