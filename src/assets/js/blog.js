@@ -1,6 +1,6 @@
 module.exports = {
   init: async function () {
-    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/edinei-dev')
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://dev.to/feed/edineidev')
       .then(res => res.json())
       .then(data => {
         // Fillter the array
