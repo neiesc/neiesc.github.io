@@ -13,7 +13,7 @@
 ## Installing
 
 ```console
-npm install
+npm install --force
 ```
 
 ## Running Application and open browser
