@@ -1,0 +1,50 @@
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.9/js/uikit-core.min.js"
+  integrity="sha512-FW50QrY5i8W1igTw/wDuSylwAb06Latn9/Ol1lTkdHja1n3BgXGTOIv6rjJ2y9rdqKu1HPhGbSP07GpjNZdYIw=="
+  crossorigin="anonymous"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.9/js/uikit-icons.min.js"
+  integrity="sha512-hcz3GoZLfjU/z1OyArGvM1dVgrzpWcU3jnYaC6klc2gdy9HxrFkmoWmcUYbraeS+V/GWSgfv6upr9ff4RVyQPw=="
+  crossorigin="anonymous"></script>
+
+<!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton = window.formbutton || function () { (formbutton.q = formbutton.q || []).push(arguments) };
+  /* customize formbutton below*/
+  formbutton("create", {
+    action: "https://formspree.io/f/xbjbkebv",
+    title: "Gostaria de entrar na nossa lista seleta para receber novidades?",
+    fields: [
+      {
+        type: "text",
+        label: "Nome:",
+        name: "name",
+        required: true,
+        placeholder: "Bruce Wayne"
+      },
+      {
+        type: "email",
+        label: "Email:",
+        name: "email",
+        required: true,
+        placeholder: "bruce@wayne.com"
+      },
+      {
+        type: "number",
+        label: "WhatsApp:",
+        name: "message",
+        required: true,
+        placeholder: "99111112222",
+      },
+      { type: "submit" }
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
