@@ -29,7 +29,7 @@ module.exports = {
     timelineItemFinish.className = 'timeline-item-finish'
     timelineItemFinish.innerHTML = `
     <div class="timeline-left">
-        <span class="uk-badge uk-badge-danger"><span uk-icon="triangle-down"></span></span>
+        <span class="uk-badge uk-badge-danger"></span>
     </div>`
     document.querySelector('div.timeline').appendChild(timelineItemFinish)
   }
