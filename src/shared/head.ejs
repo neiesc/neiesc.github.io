@@ -1,27 +1,30 @@
 <head>
   <meta charset="utf-8" />
-  <title><%=htmlWebpackPlugin.options.title%></title>
+  <title>
+    <%=htmlWebpackPlugin.options.title%>
+  </title>
   <meta name="keywords" content="<%=htmlWebpackPlugin.options.keywords%>" />
   <meta name="description" content="<%=htmlWebpackPlugin.options.description%>" />
   <meta name="author" content="<%=htmlWebpackPlugin.options.author%>" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.9/css/uikit-core.min.css"
-    media="screen"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.9/css/uikit-core.min.css" media="screen"
     integrity="sha512-hKpX9vRbIJXG+lqr+fTIVgZx1cEX1MCGTQp5m1ryGKPAywC/OSrTlPkiypRSWHNZ4sjCIQYy+Ba8K0dwnvrDNA=="
-    crossorigin="anonymous"
-  />
+    crossorigin="anonymous" />
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab" media="screen" />
-  <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous"
-    media="screen"
-  />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"
+    media="screen" />
+
+  <!-- left align the badge widget -->
+  <style type="text/css">
+    .calendly-badge-widget {
+      right: auto !important;
+      left: 20px !important;
+    }
+  </style>
+  <!-- end left align the badge widget -->
 
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
